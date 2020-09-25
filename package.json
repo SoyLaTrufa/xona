@@ -1,0 +1,22 @@
+{
+  "name": "SitioWeb",
+  "version": "1.0.0",
+  "description": "Sitio web institucional",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Synapsis CI",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "relaxed-json": "^1.0.1",
+    "vinyl-ftp": "^0.6.0"
+  }
+}
