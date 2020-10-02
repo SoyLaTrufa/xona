@@ -1,0 +1,213 @@
+.s_contacto
+	.s1
+		background: $negro
+		@media(max-width: 800px)
+			height: auto
+		.cont-1300
+			padding-top: 200px
+			@media(max-width: 1400px)
+				padding-top: 100px
+			.top
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				position: relative
+				@media(max-width: 800px)
+					flex-direction: column
+				&:before
+					content: ''
+					position: absolute
+					top: 5px
+					left: -100px
+					width: 70px
+					height: 1px
+					background: $amarillo
+				.titulo
+					width: 50%
+					@media(max-width: 800px)
+						width: 100%
+					h5
+						font-size: 14px
+						line-height: 16px
+						letter-spacing: 3px
+						margin-bottom: 10px
+						color: $blanco
+						@extend %bree-regular
+					p
+						font-size: 40px
+						line-height: 48px
+						max-width: 500px
+						color: $blanco
+						@media(max-width: 1540px)
+							font-size: 36px
+							line-height: 42px
+						@media(max-width: 800px)
+							font-size: 26px
+							line-height: 32px
+						span
+							@extend %barlow-semibold
+				.form-cont
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					width: 50%
+					padding-top: 20px
+					@media(max-width: 1540px)
+						padding-top: 0
+					@media(max-width: 800px)
+						width: 100%
+					form
+						width: 100%
+						@media(max-width: 1540px)
+							width: 75%
+						@media(max-width: 800px)
+							width: 100%
+						.form-group
+							width: 100%
+							font-size: 0
+							input,
+							textarea
+								width: 100%
+								border: none
+								border-bottom: solid 2px $blanco
+								background: transparent
+								padding: 18px 0
+								outline: none
+								color: $blanco
+								font-size: 16px
+								line-height: 22px
+								@extend %bree-regular
+								@extend %animacion-suave
+								@media(max-width: 1540px)
+									padding: 10px 0
+									font-size: 15px
+								&::placeholder
+									font-size: 14px
+									color: $blanco
+									position: relative
+									top: 0
+									@extend %animacion-suave
+								&:visited,
+								&:link,
+								&:active,
+								&:focus,
+									border-bottom: solid 2px $amarillo
+									background: transparent
+									&::placeholder
+										top: -15px
+										font-size: 12px
+										color: $amarillo
+							textarea
+								width: 100%
+								padding: 9px 0
+							legend
+								font-size: 14px
+								color: $gris
+								text-align: left
+								margin-bottom: 15px
+							label
+								width: 50%
+								font-size: 14px
+								cursor: pointer
+								text-align: left
+								@media(max-width: 460px)
+									width: 60%
+								input
+									width: 20px
+							button
+								border: none
+								background: transparent
+								color: $amarillo
+								cursor: pointer
+								font-size: 14px
+								margin: 30px 0 0
+								letter-spacing: 4px
+								position: relative
+								padding-left: 35px
+								@extend %bree-regular
+								@extend %animacion-suave
+								@media(max-width: 640px)
+									margin-top: 30px
+								&:hover
+									color: $blanco
+									span
+										left: 5px
+								span
+									position: absolute
+									top: 0
+									left: 0
+									border: solid 1px $amarillo
+									border-radius: 50%
+									width: 22px
+									height: 22px
+									margin-right: 10px
+									font-size: 11px
+									padding-left: 1px
+									@extend %animacion-suave
+								i
+									color: $amarillo
+			.bottom
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				padding-top: 80px
+				@media(max-width: 1540px)
+					padding-top: 0
+				@media(max-width: 800px)
+					flex-direction: column
+				.tel
+					width: 50%
+					@media(max-width: 800px)
+						width: 100%
+					ul
+						margin-bottom: 0
+						li
+							padding: 10px 0
+							@media(max-width: 1540px)
+								padding: 4px 0
+							span
+								color: $blanco
+								font-size: 16px
+								line-height: 21px
+								@extend %bree-regular
+							a
+								color: $blanco
+								font-size: 16px
+								line-height: 21px
+								@extend %barlow-light
+								&:hover
+									color: $amarillo
+				.redes
+					width: 50%
+					height: 175px
+					display: flex
+					flex-direction: column
+					justify-content: flex-end
+					align-items: flex-start
+					@media(max-width: 1540px)
+						height: 128px
+					@media(max-width: 800px)
+						height: auto
+						width: 100%
+						margin: 25px 0
+					a
+						color: $amarillo
+						&:hover
+							color: $blanco
+						@media(max-width: 800px)
+							margin: 10px				
+					.red
+						border: solid 1px $amarillo
+						width: 40px
+						height: 40px
+						border-radius: 50%
+						display: inline-block
+						padding: 4px 5px
+						font-size: 20px
+						transform: rotate(0deg)
+						margin-left: 12px
+						@media(max-width: 800px)
+							&:not(:nth-child(2))
+								margin-left: 0
+						&:hover
+							transform: rotate(360deg)

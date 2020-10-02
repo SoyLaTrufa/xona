@@ -2,38 +2,43 @@
 
 <body class="<?= 's_'.SECCION ?>">
 
-<header class="cabecera" id="home">
-    <div class="container">
-      <div class="row">
+<header>
 
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <button class="hamburger hamburger--efecto visible-xs">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <a href="" class="cabecera__logo anim-suave text-left">
-            <h1>Logo</h1>
-            <!-- <img src="images/logo.png" alt="<?= Config::obtener('empresa')->nombre ?>">  -->
-          </a>        
-        </div>
+  <div class="cabecera">
 
-        <div class="col-xs-12 col-sm-8 col-md-9">
-          <nav class="nav-principal">
-            <ul>
-              <li><a href="<?=url('home')?>" class=" <?= SECCION == 'home' ? 'activo' : '' ?> ">Home</a></li>
-              <li><a href="<?=url('tabs')?>" class=" <?= SECCION == 'tabs' ? 'activo' : '' ?> ">Tabs</a></li>
-              <li><a href="<?=url('acordeon')?>" class=" <?= SECCION == 'acordeon' ? 'activo' : '' ?> ">Acordeón</a></li>
-              <li><a href="<?=url('slider')?>" class=" <?= SECCION == 'slider' ? 'activo' : '' ?> ">Slider</a></li>
-              <li><a href="<?=url('contacto')?>" class=" <?= SECCION == 'contacto' ? 'activo' : '' ?> ">Contacto</a></li>
-              <li><a href="<?= Url::actual((IDIOMA == 'es') ? 'en' : 'es')?>" ><?=(IDIOMA == 'es') ? 'ENG' : 'ESP'?></a></li>
-            </ul>
-          </nav>
-        </div>
-
-
-      </div>
+    <div class="cont-1300">
+      <a href="<?=url('')?>" class=logo><img src="images/logo.png" alt="<?=$empresa->nombre?>" width="118" height="26"></a>
     </div>
+
+    <div class="hamburger">
+      <div class="top-bun"></div>
+      <div class="meat"></div>
+      <div class="bottom-bun"></div>
+    </div>
+
+    <span class="triangulo"></span>  
+    
+  </div>
+
+  <nav>
+    <img src="images/logo-nav.png" alt="<?=$empresa->nombre?>">
+    <ul>
+      <li><a href="<?=url('home')?>" class=" <?= SECCION == 'home' ? 'activo' : '' ?> ">Inicio</a></li>
+      <li><a href="<?=url('xomos')?>" class=" <?= SECCION == 'xomos' ? 'activo' : '' ?> ">Xomos</a></li>
+      <li><a href="<?=url('que-hacemos')?>" class=" <?= SECCION == 'que-hacemos' ? 'activo' : '' ?> ">Qué hacemos</a></li>
+      <li><a href="<?=url('contacto')?>" class=" <?= SECCION == 'contacto' ? 'activo' : '' ?> ">Contacto</a></li>
+      <div class="contactanos">
+        <a href="mailto:<?=$empresa->email?>"><?=$empresa->email?></a>
+        <div class="redes">
+          <a href="<?=$empresa->redes['in']?>"><i class="icon-linkedin"></i></a>
+          <a href="<?=$empresa->redes['ig']?>"><i class="icon-instagram"></i></a>
+          <a href="<?=$empresa->redes['fb']?>"><i class="icon-facebook"></i></a>
+        </div>
+      </div>
+    </ul>
+  </nav>
+
+  
+
 </header>
 
-<main>

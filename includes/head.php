@@ -43,20 +43,24 @@ $empresa = Config::obtener('empresa');
     } ?>
 
     <!-- Favicons: http://realfavicongenerator.net/ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?=BASE_URL?>images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="<?=BASE_URL?>images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="<?=BASE_URL?>images/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="<?=BASE_URL?>images/favicons/manifest.json">
-    <link rel="mask-icon" href="<?=BASE_URL?>images/favicons/safari-pinned-tab.svg" color="#da802d">
-    <link rel="shortcut icon" href="<?=BASE_URL?>images/favicons/favicon.ico">
-    <meta name="msapplication-config" content="<?=BASE_URL?>images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+
+    
 
     <?php
    
     // Uno y minifico todos los CSS comunes a todas las páginas
     $main_css = $minified->merge(BASE_PATH.'css/main.min.css', 'css', array(
-          BASE_PATH.'css/bootstrap/bootstrap.min.css',
+          BASE_PATH.'css/bootstrap.min.css',
+          BASE_PATH.'fonts/fontello/css/fontello.css',
           BASE_PATH.'sass/main.css',
       ));
     echo ' <link rel="stylesheet" href="'.str_replace(BASE_PATH, '', $main_css).'?v='.filemtime($main_css).'" />'."\r\n";

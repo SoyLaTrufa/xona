@@ -1,0 +1,81 @@
+.s_casos-de-exito
+	.s1
+		background-image: url('../images/casos/bg.jpg')
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+		background-attachment: fixed
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		@media(max-width: 860px)
+			// height: auto
+		.caja
+			width: 66.6%
+			padding: 50px 70px 50px 95px
+			background: $blanco
+			@media(max-width: 860px)
+				width: 100%
+				padding: 30px 15px
+			h5
+				@extend %bree-regular
+				color: $gris
+				font-size: 14px
+				line-height: 24px
+			h1
+				font-size: 36px
+				line-height: 48px
+				margin-bottom: 30px
+				color: $gris
+				@media(max-width: 570px)
+					font-size: 24px
+					line-height: 30px
+					margin-bottom: 15px
+			p
+				@extend %barlow-light
+				font-size: 20px
+				line-height: 30px
+				@media(max-width: 570px)
+					font-size: 16px
+					line-height: 20px
+	.casos
+		background-image: url('../images/casos/bg.jpg')
+		background-repeat: no-repeat
+		background-position: center center
+		background-attachment: fixed
+		background-size: cover
+		display: flex
+		flex-wrap: wrap
+		@media(max-width: 860px)
+			height: auto
+		.mod
+			width: 33.33%
+			height: 50vh
+			border: solid 1px $blanco
+			@media(max-width: 860px)
+				width: 50%
+			@media(max-width: 570px)
+				width: 100%
+		.mod-txt
+			background-color: $blanco
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 15px 70px
+			@media(max-width: 1200px)
+				padding: 15px 25px
+			p
+				@extend %barlow-light
+				font-size: 20px
+				line-height: 30px
+				@media(max-width: 1200px)
+					font-size: 16px
+					line-height: 21px
+		.mod-bg
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+		.mod-large
+			width: 66.6%
+			@media(max-width: 860px)
+				width: 100%

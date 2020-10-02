@@ -1,0 +1,219 @@
+.s_xomos
+	.s1
+		background: green
+		.cont-1300
+			height: 100vh
+			display: flex
+			justify-content: center
+			align-items: center
+			h2
+				color: $blanco
+				font-size: 55px
+				line-height: 65px
+	.s2
+		.cont-1300
+			position: relative
+			height: 100vh
+			padding-top: 80px
+			.loguito
+				position: absolute
+				top: 50px
+				left: 15px
+			.bloque
+				background-image: url('../images/xomos/s2.jpg')
+				background-size: initial
+				background-repeat: no-repeat
+				background-position: right top
+				height: calc(100vh - 80px)
+				border: solid 1px $blanco
+				@media(max-width: 640px)
+					background-image: unset
+					margin-top: 0
+				.mod
+					width: 580px
+					margin-top: 125px
+					padding: 40px 0 60px
+					background: $blanco
+					position: relative
+					@media(max-width: 1400px)
+						margin-top: 75px
+					@media(max-width: 640px)
+						width: 100%
+					&:before
+						content: ''
+						position: absolute
+						top: 50px
+						left: -100px
+						width: 70px
+						height: 1px
+						background: $amarillo
+					h5
+						font-size: 14px
+						line-height: 16px
+						letter-spacing: 3px
+						margin-bottom: 10px
+						color: $gris
+						@extend %bree-regular
+					h2
+						font-size: 55px
+						line-height: 65px
+						margin-bottom: 30px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 38px
+							line-height: 42px
+							margin-bottom: 15px
+						span
+							@extend %barlow-bold
+					p
+						@extend %barlow-light
+						font-size: 20px
+						line-height: 30px
+						max-width: 450px
+						margin-bottom: 35px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 18px
+							line-height: 26px
+							margin-bottom: 15px
+					i
+						color: $amarillo
+	.s3
+		padding: 50px 0 0
+		.cont-1300
+			.bloque-cont
+				background-image: url('../images/xomos/s3.jpg')
+				background-size: initial
+				background-repeat: no-repeat
+				background-position: left top
+				border: solid 1px $blanco
+				margin-top: 40px
+				padding-bottom: 130px
+				display: flex
+				justify-content: flex-end
+				@media(max-width: 1400px)
+					padding-bottom: 30px
+					padding-bottom: 0
+				@media(max-width: 640px)
+					background-image: unset
+					margin-top: 0
+				.bloque
+					width: 580px
+					margin-top: 60px
+					padding: 40px 15px 40px 70px
+					background: $blanco
+					position: relative
+					@media(max-width: 1400px)
+						margin-top: 15px
+					@media(max-width: 640px)
+						width: 100%
+						padding: 15px 0
+					&:before
+						content: ''
+						position: absolute
+						top: 50px
+						left: 100%
+						width: 70px
+						height: 1px
+						background: $amarillo
+					h5
+						font-size: 14px
+						line-height: 16px
+						letter-spacing: 3px
+						margin-bottom: 10px
+						color: $gris
+						@extend %bree-regular
+					h2
+						font-size: 40px
+						line-height: 48px
+						margin-bottom: 30px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 28px
+							line-height: 34px
+							margin-bottom: 10px
+						span
+							@extend %barlow-bold
+						@media(max-width: 640px)
+							font-size: 22px
+							line-height: 28px
+					.iconos
+						display: flex
+						justify-content: space-between
+						flex-wrap: wrap
+						.icon
+							width: 200px
+							margin-bottom: 10px
+							@media(max-width: 640px)
+								width: calc(50% - 30px)
+								margin: 15px
+							img
+								width: 60px
+							p
+								font-size: 16px
+								line-height: 24px
+								color: $gris
+								@media(max-width: 400px)
+									font-size: 14px
+	.s4
+		.cont-1300
+			position: relative
+			height: 100vh
+			padding-top: 80px
+			.loguito
+				position: absolute
+				top: 50px
+				left: 15px
+			.bloque
+				width: 100%
+				font-size: 0
+				.mod
+					width: 500px
+					padding: 0
+					background: $blanco
+					display: inline-block
+					vertical-align: middle
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						top: 10px
+						left: -100px
+						width: 70px
+						height: 1px
+						background: $amarillo
+					h5
+						font-size: 14px
+						line-height: 16px
+						letter-spacing: 3px
+						margin-bottom: 10px
+						color: $gris
+						@extend %bree-regular
+					h2
+						font-size: 40px
+						line-height: 48px
+						margin-bottom: 30px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 26px
+							line-height: 32px
+							margin-bottom: 15px
+						span
+							@extend %barlow-bold
+					p
+						@extend %barlow-light
+						font-size: 16px
+						line-height: 24px
+						max-width: 450px
+						margin-bottom: 35px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 18px
+							line-height: 26px
+							margin-bottom: 15px
+				.gif
+					width: 39vw
+					max-width: 39vw
+					margin-left: 30px
+					// @media(max-width: 1550px)
+					// 	max-width: 500px

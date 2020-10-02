@@ -41,30 +41,23 @@ return array(
 				'img' => '',
 			),
 		),
-		'tabs' => array(
+		'xomos' => array(
 			'es' => array(
-				'titulo' => 'Tabs',
+				'titulo' => 'Xomos',
 				'descripcion' => '',
 				'img' => '',
 			),
 		),
-		'acordeon' => array(
+		'que-hacemos' => array(
 			'es' => array(
-				'titulo' => 'Acordeón',
+				'titulo' => 'Qué hacemos',
 				'descripcion' => '',
 				'img' => '',
 			),
 		),
-		'slider' => array(
+		'casos-de-exito' => array(
 			'es' => array(
-				'titulo' => 'Slider',
-				'descripcion' => '',
-				'img' => '',
-			),
-		),
-		'modal' => array(
-			'es' => array(
-				'titulo' => 'Modal',
+				'titulo' => 'Casos de éxito',
 				'descripcion' => '',
 				'img' => '',
 			),

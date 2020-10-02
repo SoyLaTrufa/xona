@@ -1,116 +1,252 @@
-// main: ../main.sass
-
-.cabecera
+header
 	width: 100%
-	box-shadow: 0 0 1px rgba(0,65,94,0.5)
-	display: block
+	.cabecera
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: fixed
+		z-index: 100
+		padding-top: 15px
+	.logo
+		padding-left: 15px
+		@media(max-width: 1360px)
+			padding-left: 0
+	.triangulo
+		position: absolute
+		top: -40px
+		right: -255px
+		z-index: 99
+		width: 255px
+		height: 255px
+		background: $gris
+		transform-origin: bottom left
+		transform: skew(26deg)
+		@media(max-width: 800px)
+			top: -110px
+			right: -255px
+	nav
+		transform-origin: top right
+		position: fixed
+		width: 100%
+		height: 100vh
+		background: $gris
+		right: -180%
+		top: 0
+		z-index: 95
+		transform: matrix(0.49,1.10,-0.91,0.41,0,0)
+		@extend %animacion-nav
+		display: flex
+		justify-content: center
+		align-items: center
+		&.activo
+			right: 0
+			transform: matrix(1,0,0,1,0,0)
+		@media(max-width: 940px)
+			background-image: url('../images/logo-nav.png')
+			background-position: center center
+			background-size: 75%
+			background-repeat: no-repeat
+		img
+			align-self: center
+			margin-right: 60px
+			@media(max-width: 940px)
+				display: none
+		ul
+			margin-bottom: 0
+			margin-left: 60px
+			li
+				a
+					color: $blanco
+					@extend %barlow-light
+					font-size: 55px
+					line-height: 80px
+					&:hover,
+					&.activo
+						color: $amarillo
+					@media(max-width: 460px)
+						font-size: 40px
+						line-height: 65px
+			.contactanos
+				padding-top: 40px
+				a
+					color: $amarillo
+					@extend %bree-regular
+					font-size: 16px
+					line-height: 18px
+					&:hover
+						color: $blanco
+				.redes
+					margin-top: 20px
+					a
+						border: solid 1px $amarillo
+						width: 40px
+						height: 40px
+						border-radius: 50%
+						display: inline-block
+						padding: 9px 8px
+						&:not(:first-child)
+							margin-left: 12px
 
-.nav-principal
-	float: right
-	padding-top: 25px
-	ul
-		li
-			display: inline-block
-			padding: 0 10px
-			&:last-child
-				padding-right: 0
-			a
-				font-size: 18px
-				color: #7b8b8e
-				font-weight: 700
-				&:hover
-					color: #34ad58
-			a.activo
-				color: #34ad58
+// 
 
-/*Hamburguesa*/
-.hamburger,
-.hamburger:focus
-	text-transform: none
-	margin: 7px 0 0
-	border: 0
-	background-color: transparent
-	overflow: visible
-	cursor: pointer
-	outline: none
-	z-index: 99999999
-	transition: all 250ms ease-in-out
+.hamburger
+  display: flex
+  align-self: center
+  flex-direction: column
+  justify-content: space-between
+  width: 55px
+  height: 25px
+  padding-right: 20px
+  cursor: pointer
+  z-index: 100
+  opacity: 1
+  @media(max-width: 800px)
+  	padding-right: 10px
+  div
+    align-self: flex-end
+    height: 2px
+    width: 100%
+    background: #fff
+    transition: all 400ms ease-in-out  
+  .meat
+    width: 75%
+    opacity: 1
+    transition: all 400ms ease-in-out    
+  .bottom-bun
+    width: 50%
+    opacity: 1
+    transition: all 400ms ease-in-out  
+  &:hover
+    div
+      width: 100%    
+    .top-bun
+      animation: burger-hover .5s ease-in-out alternate    
+    .meat
+      animation: burger-hover .5s ease-in-out alternate forwards 200ms    
+    .bottom-bun
+      animation: burger-hover .5s ease-in-out alternate forwards 400ms
+  &.clickeado
+  	.meat
+  		width: 90%
+  		transform: translate3d(3px, 6px, 0) rotate(48deg)
+  	.bottom-bun
+  		width: 90%
+  		transform: translate3d(3px, -9px, 0) rotate(-43deg)
+  	.top-bun
+  		opacity: 0
+  	&:hover
+		div
+			width: 100%
+		.meat
+			width: 75%
+			animation: none !important
+		.bottom-bun
+			width: 50%
+			animation: none !important
 
-.hamburger-box
-	display: inline-block
-	width: 40px
-	height: 40px
-	border-radius: 5px
-	position: relative
-	-webkit-transition: all .20s ease-in-out
-	-moz-transition: all .20s ease-in-out
-	-o-transition: all .20s ease-in-out
-	-ms-transition: all .20s ease-in-out
-	transition: all .20s ease-in-out
+//Animation Keyframes
+@keyframes burger-hover
+  0%
+    width: 100%
+  50%
+    width: 50%
+  100%
+    width: 100%
 
-.hamburger:hover .hamburger-box
-	background: none
+// ----------------------
+// .hamburger,
+// .hamburger:focus
+// 	padding-right: 30px
+// 	text-transform: none
+// 	width: 45px
+// 	height: 45px
+// 	margin: 0
+// 	border: 0
+// 	background-color: inherit
+// 	overflow: visible
+// 	cursor: pointer
+// 	outline: none
+// 	z-index: 100
+// 	transition: all 250ms ease-in-out
 
-.hamburger-inner
-	display: block
-	margin-top: 1px
-	top: 50%
-	left: 0
+// .hamburger-box
+// 	display: inline-block
+// 	width: 25px
+// 	height: 21px
+// 	border-radius: 5px
+// 	position: relative
+// 	-webkit-transition: all .55s ease-in-out
+//  	-moz-transition: all .55s ease-in-out
+//     -o-transition: all .55s ease-in-out
+//     -ms-transition: all .55s ease-in-out
+//     transition: all .55s ease-in-out
+// 	&:hover
+// 		.hamburger-inner::before
+// 			top: -6px
+// 		.hamburger-inner::after
+// 			bottom: -6px
 
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after
-	width: 40px
-	height: 2px
-	border-radius: 0
-	background-color: red
-	position: absolute
-	transition-property: -webkit-transform
-	transition-property: transform
-	transition-property: transform, -webkit-transform
-	transition-duration: 0.15s
-	transition-timing-function: ease
+// .hamburger:hover .hamburger-box
+// 	background: none
 
-.hamburger-inner::before,
-.hamburger-inner::after
-	content: ''
-	display: block
+// .hamburger-inner
+// 	display: block
+// 	margin-top: 1px
+// 	top: 50%
+// 	left: 0
 
-.hamburger-inner::before
-	top: -10px
+// .hamburger-inner,
+// .hamburger-inner::before,
+// .hamburger-inner::after
+// 	width: 25px
+// 	height: 3px
+// 	border-radius: 0
+// 	background-color: #fff
+// 	position: absolute
+// 	transition-property: -webkit-transform
+// 	transition-property: transform
+// 	transition-property: transform, -webkit-transform
+// 	transition-duration: 0.15s
+// 	transition-timing-function: ease
 
-.hamburger-inner::after
-	bottom: -10px
+// .hamburger-inner::before,
+// .hamburger-inner::after
+// 	content: ''
+// 	display: block
 
-//Efecto de hambuger
-.hamburger--efecto .hamburger-box
-	-webkit-perspective: 80px
-	perspective: 80px
+// .hamburger-inner::before
+// 	top: -8px
 
-.hamburger--efecto .hamburger-inner
-	transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
-	transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
-	transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+// .hamburger-inner::after
+// 	bottom: -8px
 
-.hamburger--efecto .hamburger-inner::after
-	transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
-	transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
-	transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+// //Efecto de hambuger
+// .hamburger--efecto .hamburger-box
+// 	-webkit-perspective: 80px
+// 	perspective: 80px
 
-.hamburger--efecto.is-active .hamburger-inner
-	background-color: transparent
-	-webkit-transform: rotateY(180deg)
-	transform: rotateY(180deg)
+// .hamburger--efecto .hamburger-inner
+// 	transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+// 	transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+// 	transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
 
-.hamburger--efecto.is-active .hamburger-inner::before
-	-webkit-transform: translate3d(0, 10px, 0) rotate(45deg)
-	transform: translate3d(0, 10px, 0) rotate(45deg)
+// .hamburger--efecto .hamburger-inner::after
+// 	transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+// 	transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+// 	transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
 
-.hamburger--efecto.is-active .hamburger-inner::after
-	-webkit-transform: translate3d(0, -10px, 0) rotate(-45deg)
-	transform: translate3d(0, -10px, 0) rotate(-45deg)
+// .hamburger--efecto.is-active .hamburger-inner
+// 	background-color: transparent
+// 	-webkit-transform: rotateY(180deg)
+// 	transform: rotateY(180deg)
 
-@media(max-width: 479px)
-	.hamburger,
-	.hamburger:focus
-		margin: 0
+// .hamburger--efecto.is-active .hamburger-inner::before
+// 	-webkit-transform: translate3d(2px, 10px, 0) rotate(45deg)
+// 	transform: translate3d(2px, 10px, 0) rotate(45deg)
+// 	top: -10px
+
+// .hamburger--efecto.is-active .hamburger-inner::after
+// 	-webkit-transform: translate3d(2px, -10px, 0) rotate(-45deg)
+// 	transform: translate3d(2px, -10px, 0) rotate(-45deg)
+// 	bottom: -10px

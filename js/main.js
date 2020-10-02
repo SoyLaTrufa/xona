@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	
+
 	/** 
 	* PLUGINS
 	* Todo el JS está dividido en módulos que cargamos opcionalmente junto con
@@ -57,28 +59,23 @@ $(document).ready(function(){
 
 		], function(){
 
-			$('.slider-principal > ul').owlCarousel({
-				items: 3,
+			$('.slider-clientes > ul').owlCarousel({
+				items: 4,
 			    loop: true,
 				autoplay: true,
-			    autoplayTimeout: 6000,
+			    autoplayTimeout: 4500,
 			    slideSpeed: 100,
-		        nav: true,
+		        nav: false,
 		        dots: true,
-		        dotsContainer: '.dotsCont',
-		        navText: [
-	            "<i class=\"icon-left-open icon\"></i><span class=\"nav-slider-prev\">Anterior</span>",
-	            "<i class=\"icon-right-open icon\"></i><span class=\"nav-slider-next\">Siguiente</span>"
-	            ],
 	             responsive:{
                 0:{
                     items:1
                 },
                 550:{
-                    items:2
-                },
-                767:{
                     items:3
+                },
+                991:{
+                    items:4
                 },
               },
 			});	
@@ -337,8 +334,10 @@ $(document).ready(function(){
 		var $cabecera = $('.cabecera');
 		if( $(window).scrollTop() > 20){
 			$cabecera.addClass('scroll');
+			$('.logo').css('opacity', '0');
 		}else{
 			$cabecera.removeClass('scroll');
+			$('.logo').css('opacity', '1');
 		}
 	});
 	// Oculta y muestra el menú cuando hay scroll
@@ -351,6 +350,7 @@ $(document).ready(function(){
 	       //Cierra el menú cuando hay scroll
 			$(".navbar-collapse").removeClass("in").addClass("collapse");
 			$(".hamburger").removeClass("is-active");
+			$("nav").removeClass("activo");
 	   } else {
 	      $cabecera.removeClass('ocultar');
 	   }
@@ -360,7 +360,8 @@ $(document).ready(function(){
 	/// Menú hamburguesa ///
 	$(document).ready(function(){
 		$('.hamburger').click(function(){
-			$(this).toggleClass('is-active');
+			$(this).toggleClass('clickeado');
+			$('nav').toggleClass('activo');
 		});
 	});
 

@@ -30,8 +30,8 @@ return array(
 	*
 	*/
 	'dominios_permitidos' => array(
-		'base.synapsis.com.ar',
 		'localhost',
+		'192.168.0.2',
 	),
 
 	/* 
@@ -44,7 +44,7 @@ return array(
 	* que se genera automáticamente.
 	*
 	*/
-	'base_url' => 'http://localhost/synapsis/basesynapsisfrontend/',
+	'base_url' => 'http://192.168.0.2/biribiri/xona/web/',
 
 	/* 
 	* RUTA BASE

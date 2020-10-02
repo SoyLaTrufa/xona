@@ -59,22 +59,22 @@ function loadFtpConfig(){
 */
 gulp.task('deploy-dev-watch', function() {
 
-    var ftpConfig = loadFtpConfig();
-    var conn = ftp.create( {
-        host:     ftpConfig.host,
-        user:     ftpConfig.user,
-        password: ftpConfig.password,
-        parallel: 3,
-        // log:      gutil.log
-    } );
+    // var ftpConfig = loadFtpConfig();
+    // var conn = ftp.create( {
+    //     host:     ftpConfig.host,
+    //     user:     ftpConfig.user,
+    //     password: ftpConfig.password,
+    //     parallel: 3,
+    //     // log:      gutil.log
+    // } );
 
     gulp.watch(['sass/**/*', 'sass/*'])
     .on('change', function(event) {
       console.log('Bien joven Padawan, has realizado cambios! Vamos a subir los files de la estrella de la muerte "' + event.path);
 
       return gulp.src( [event.path], { base: '.', buffer: false } )
-        .pipe( conn.newer( ftpConfig.remote_path ) ) // only upload newer files 
-        .pipe( conn.dest( ftpConfig.remote_path ) )
+        // .pipe( conn.newer( ftpConfig.remote_path ) ) // only upload newer files 
+        // .pipe( conn.dest( ftpConfig.remote_path ) )
       ;
     });
 });

@@ -1,0 +1,265 @@
+.s_home
+	.s1
+		background-image: url('../images/home/banner-top.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		.cont-1300
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			h1
+				color: $blanco
+				font-size: 55px
+				line-height: 65px
+				max-width: 715px
+				margin-top: 70px
+				@media(max-width: 640px)
+					font-size: 28px
+					line-height: 36px
+					max-width: 100%
+			p
+				color: $blanco
+				font-size: 24px
+				line-height: 36px
+				margin: 70px 0
+				max-width: 715px
+				@media(max-width: 640px)
+					font-size: 18px
+					line-height: 26px
+					max-width: 100%
+					margin-top: 30px
+			.mouse
+				align-self: center
+				animation: levitate 1.5s infinite
+	.s2
+		padding: 50px 0 0
+		.cont-1300
+			.bloque-cont
+				background-image: url('../images/home/xomos.jpg')
+				background-size: initial
+				background-repeat: no-repeat
+				background-position: right top
+				border: solid 1px $blanco
+				margin-top: 40px
+				padding-bottom: 130px
+				@media(max-width: 1400px)
+					padding-bottom: 30px
+				@media(max-width: 640px)
+					background-image: unset
+					margin-top: 0
+				.bloque
+					width: 580px
+					margin-top: 125px
+					padding: 40px 0 60px
+					background: $blanco
+					position: relative
+					@media(max-width: 1400px)
+						margin-top: 75px
+					@media(max-width: 640px)
+						width: 100%
+					&:before
+						content: ''
+						position: absolute
+						top: 50px
+						left: -100px
+						width: 70px
+						height: 1px
+						background: $amarillo
+					h5
+						font-size: 14px
+						line-height: 16px
+						letter-spacing: 3px
+						margin-bottom: 10px
+						color: $gris
+						@extend %bree-regular
+					h2
+						font-size: 55px
+						line-height: 65px
+						margin-bottom: 30px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 38px
+							line-height: 42px
+							margin-bottom: 15px
+					p
+						@extend %barlow-light
+						font-size: 20px
+						line-height: 30px
+						max-width: 450px
+						margin-bottom: 35px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 18px
+							line-height: 26px
+							margin-bottom: 15px
+					a
+						color: $gris
+						font-size: 14px
+						line-height: 20px
+						letter-spacing: 4px
+						span
+							display: inline-block
+							border: solid 1px $amarillo
+							border-radius: 50%
+							width: 22px
+							height: 22px
+							margin-right: 10px
+							font-size: 11px
+							padding-left: 2px
+							padding-bottom: 2px
+						i
+							color: $amarillo
+	.s3
+		background: green
+		.cont-1300
+			height: 100vh
+			display: flex
+			justify-content: center
+			align-items: center
+			h2
+				color: $blanco
+				font-size: 55px
+				line-height: 65px
+	.s4
+		background: $negro
+		.cont-1300
+			height: 100vh
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			img
+				position: absolute
+				top: 50px
+				left: 0
+			.bloque
+				width: 820px
+				height: 400px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				position: relative
+				@media(max-width: 900px)
+					width: 640px
+					height: 350px
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 40px
+					height: 40px
+					background-image: url('../images/icons/corner-top.png')
+					background-size: contain
+					background-repeat: no-repeat
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					right: 0
+					width: 40px
+					height: 40px
+					background-image: url('../images/icons/corner-down.png')
+					background-size: contain
+					background-repeat: no-repeat
+				.mod
+					p
+						@extend %bree-regular
+						font-size: 48px
+						line-height: 65px
+						color: $blanco
+						max-width: 600px
+						margin-bottom: 50px
+						@media(max-width: 900px)
+							font-size: 36px
+							line-height: 42px
+						@media(max-width: 540px)
+							font-size: 28px
+					a
+						color: $gris
+						font-size: 14px
+						line-height: 20px
+						letter-spacing: 4px
+						span
+							display: inline-block
+							border: solid 1px $amarillo
+							border-radius: 50%
+							width: 22px
+							height: 22px
+							margin-right: 10px
+							font-size: 11px
+							padding-left: 2px
+							padding-bottom: 2px
+						i
+							color: $amarillo
+	.s5
+		padding: 50px 0 0
+		.cont-1300
+			.bloque-cont
+				background-image: url('../images/home/s5.jpg')
+				background-size: initial
+				background-repeat: no-repeat
+				background-position: right top
+				border: solid 1px $blanco
+				margin-top: 40px
+				padding-bottom: 130px
+				@media(max-width: 1400px)
+					padding-bottom: 30px
+				@media(max-width: 640px)
+					background-image: unset
+					margin-top: 0
+				.bloque
+					width: 580px
+					margin-top: 125px
+					padding: 60px 0
+					background: $blanco
+					@media(max-width: 1400px)
+						margin-top: 75px
+					@media(max-width: 640px)
+						width: 100%
+						margin-top: 25px
+					h2
+						font-size: 40px
+						line-height: 48px
+						margin-bottom: 30px
+						color: $gris
+						max-width: 420px
+						@media(max-width: 1400px)
+							font-size: 38px
+							line-height: 42px
+							margin-bottom: 15px
+						@media(max-width: 640px)
+							font-size: 28px
+							line-height: 38px
+						span
+							@extend %barlow-bold
+					p
+						@extend %barlow-light
+						font-size: 20px
+						line-height: 30px
+						margin-bottom: 35px
+						color: $gris
+						@media(max-width: 1400px)
+							font-size: 18px
+							line-height: 26px
+							margin-bottom: 15px
+					a
+						color: $gris
+						font-size: 14px
+						line-height: 20px
+						letter-spacing: 4px
+						span
+							display: inline-block
+							border: solid 1px $amarillo
+							border-radius: 50%
+							width: 22px
+							height: 22px
+							margin-right: 10px
+							font-size: 11px
+							padding-left: 2px
+							padding-bottom: 2px
+						i
+							color: $amarillo

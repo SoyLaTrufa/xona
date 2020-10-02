@@ -54,7 +54,7 @@
     # Options +SymLinksIfOwnerMatch
 
     # (4)
-     RewriteBase /synapsis/basesynapsisfrontend/
+     RewriteBase /biribiri/xona/web/
 
     # (5)
     # RewriteOptions <options>

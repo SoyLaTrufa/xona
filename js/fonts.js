@@ -31,22 +31,39 @@
 	// Cargamos las fuentes principales
 	// El nombre de la variable es al azar, pero lo vas a utilizar luego en el css. Es recomendable utilizar CamelCase (Ej openSansRegular). Como en este paso estamos cargando las fuentes principales, tienen que ser REGULAR.
 	//FontFace Observer (nombre del archivo subido de font squirrel sin extensión)
-	var RalewayRegular = new FontFaceObserver('RalewayRegular');
+	var BarlowRegular = new FontFaceObserver('BarlowRegular');
 
 	Promise.all([
-		RalewayRegular.load(),
+		BarlowRegular.load(),
 
 	], timeout).then(function () {
 		console.log('Stage 1 Complete');
 		document.documentElement.className += " fonts-loaded";
 
 		// Luego cargo las fuentes secundarias, el resto de las fuentes.
-		var RalewayBold = new FontFaceObserver('RalewayBold', {
+		var BarlowBold = new FontFaceObserver('BarlowBold', {
 			weight: 700
 		});
 
+		var BarlowSemiBold = new FontFaceObserver('BarlowSemiBold', {
+			weight: 600
+		});
+
+		var BarlowLight = new FontFaceObserver('BarlowLight', {
+			weight: 300
+		});
+		
+
+		var BreeRegular = new FontFaceObserver('BreeRegular', {
+			weight: 400
+		});
+
 		Promise.all([
-			RalewayBold.load(), 
+			BarlowBold.load(),
+			BarlowSemiBold.load(),
+			BarlowLight.load(),
+
+			BreeRegular.load(),
 
 		]).then(function () {
 			console.log('Stage 2 Complete');
