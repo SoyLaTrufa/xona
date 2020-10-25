@@ -32,6 +32,9 @@ return array(
 	'dominios_permitidos' => array(
 		'localhost',
 		'192.168.0.2',
+		'xona.com.ar',
+		'www.xona.com.ar',
+		'xona.servidoraweblab.ar',
 	),
 
 	/* 
@@ -44,7 +47,9 @@ return array(
 	* que se genera automáticamente.
 	*
 	*/
-	'base_url' => 'http://192.168.0.2/biribiri/xona/web/',
+	'base_url' => '',
+	// 'base_url' => 'http://192.168.0.2/biribiri/xona/web/',
+	// 'base_url' => '/wp_xona/desarrollo/',
 
 	/* 
 	* RUTA BASE

@@ -69,7 +69,7 @@ $(document).ready(function(){
 		        dots: true,
 	             responsive:{
                 0:{
-                    items:1
+                    items:2
                 },
                 550:{
                     items:3
@@ -80,22 +80,54 @@ $(document).ready(function(){
               },
 			});	
 
-			$('.slider-novedad > ul').owlCarousel({
-				autoplay: false,
-				items: 1,
+			$('.slider-casosTop > ul').owlCarousel({
+				items: 4,
 			    loop: true,
-			    slideSpeed: 1000,
-			    autoplaySpeed: 500,
-		        singleItem: true,
-		        dragBeforeAnimFinish: false,
-		        mouseDrag: false,
-		        touchDrag: true,
+				autoplay: false,
+			    autoplayTimeout: 4500,
+			    slideSpeed: 100,
 		        nav: true,
 		        dots: false,
 		        navText: [
-	            "<i class=\"icon-left-open icon\"></i><span>Anterior</span>",
-	            "<i class=\"icon-right-open icon\"></i><span>Siguiente</span>"
+	            "<i class=\"icon-left-open icon\"></i><span></span>",
+	            "<i class=\"icon-right icon\"></i><span></span>"
 	            ],
+	            responsive:{
+                0:{
+                    items:2
+                },
+                640:{
+                    items:3
+                },
+                991:{
+                    items:4
+                },
+              },
+			});
+
+			$('.slider-casosDown > ul').owlCarousel({
+				items: 4,
+			    loop: true,
+				autoplay: false,
+			    autoplayTimeout: 4500,
+			    slideSpeed: 100,
+		        nav: true,
+		        dots: false,
+		        navText: [
+	            "<i class=\"icon-left-open icon\"></i><span></span>",
+	            "<i class=\"icon-right icon\"></i><span></span>"
+	            ],
+	            responsive:{
+                0:{
+                    items:2
+                },
+                640:{
+                    items:3
+                },
+                991:{
+                    items:4
+                },
+              },
 			});		
 
 		});
@@ -299,7 +331,7 @@ $(document).ready(function(){
 						target = target.length ? target : $('[name=' + this.hash.slice(1) +']'); /* [5] */
 						if (target.length) {
 							$('html,body').animate({ /* [6] */
-							scrollTop: target.offset().top - 70 /* [6] */
+							scrollTop: target.offset().top /* [6] */
 							}, 1000); return false; /* [6] */
 						}
 					});
@@ -325,19 +357,17 @@ $(document).ready(function(){
 	});
 
 
-
-
 	 
 	/// Scroll en cabecera ///
 	// Anima el menú cuando hay scroll
 	$( window ).scroll(function(){
 		var $cabecera = $('.cabecera');
 		if( $(window).scrollTop() > 20){
-			$cabecera.addClass('scroll');
-			$('.logo').css('opacity', '0');
+			$('.logo').addClass('scroll');
+			// $('.logo').css('opacity', '0');
 		}else{
-			$cabecera.removeClass('scroll');
-			$('.logo').css('opacity', '1');
+			$('.logo').removeClass('scroll');
+			// $('.logo').css('opacity', '1');
 		}
 	});
 	// Oculta y muestra el menú cuando hay scroll
@@ -364,6 +394,19 @@ $(document).ready(function(){
 			$('nav').toggleClass('activo');
 		});
 	});
+
+	$(document).ready(function(){
+
+		$('.franja').mouseover(function(){
+			$(this).addClass('oculto');
+		})
+		$('.franja').mouseleave(function(){
+			$(this).removeClass('oculto');
+		})
+
+	});
+
+	
 
 
 

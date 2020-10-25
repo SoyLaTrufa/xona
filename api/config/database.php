@@ -12,9 +12,15 @@
 return array(
 
 	'hostname' => 'localhost',
-	'database' => 'base_cms',
-	'username' => 'base_admin',
-	'password' => 'eZPORM5O',
+	'database' => 'xona_cms',
+	'username' => 'xona_admin',
+	'password' => 'Bsr3GKe9dIA7',
 	'charset'  => 'utf8',
+
+	// 'hostname' => '192.168.0.195',
+	// 'database' => 'cms_xona',
+	// 'username' => 'cms_admin',
+	// 'password' => 'Bsr3GKe9dIA7',
+	// 'charset'  => 'utf8',
 	
 );

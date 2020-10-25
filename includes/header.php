@@ -7,7 +7,7 @@
   <div class="cabecera">
 
     <div class="cont-1300">
-      <a href="<?=url('')?>" class=logo><img src="images/logo.png" alt="<?=$empresa->nombre?>" width="118" height="26"></a>
+      <a href="<?=url('')?>" class="logo"><img src="images/logo.png" alt="<?=$empresa->nombre?>" width="118" height="26"></a>
     </div>
 
     <div class="hamburger">

@@ -53,6 +53,9 @@ $empresa = Config::obtener('empresa');
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#000000">
 
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="js/jquery.owl-carousel/assets/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="css/fullpage.css">
     
 
     <?php
@@ -69,6 +72,17 @@ $empresa = Config::obtener('empresa');
     <!-- Carga las tipografías -->
     <script async src="js/fonts.js"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf1q9kZAAAAAAQ6UDmi-2t1JwdwdB9jEESDKQkq"></script>
+
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lf1q9kZAAAAAAQ6UDmi-2t1JwdwdB9jEESDKQkq', { action: 'contacto' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaContacto');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script> 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,3 +90,20 @@ $empresa = Config::obtener('empresa');
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4HKLC6KT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MX4HKLC6KT');
+</script>
+
+<style>
+    .grecaptcha-badge{
+        opacity: 0!important;
+        z-index: -1 !important;
+    }
+</style>

@@ -1,0 +1,135 @@
+.s_cms
+	#wrapper
+		margin-top: 35px
+	.wrap-logueado
+		width: 100%
+		padding: 15px 15px 15px 175px
+		position: relative
+		@extend %animacion-suave
+		&.activo
+			padding: 15px
+		#content
+			overflow: auto
+			height: 530px
+			padding: 20px 15px
+			box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.55)
+			.border-bottom
+				.filtro
+					width: 100%
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					fieldset
+						border: none
+						margin-right: 15px
+					button
+						box-shadow: none
+						border: solid 1px $gris-dark
+						background: $gris-dark
+						color: $blanco
+						padding: 5px 16px
+						cursor: pointer
+						@extend %animacion-suave
+						&:hover
+							background: transparent
+							color: $gris-dark
+					.clean
+						margin-left: 15px
+						background: transparent
+						a
+							color: $gris-dark
+						&:hover
+							background: $gris-dark
+							a
+								color: $blanco
+			.top-table
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				h1
+					padding: 15px 0
+					font-size: 24px
+					display: inline-block
+					@media(max-width: 460px)
+						font-size: 18px
+				.lista_acciones-gral
+					padding-left: 25px
+					input[type=button],
+					.boton-csv
+						box-shadow: none
+						background: $verde
+						border: solid 1px $verde
+						color: $blanco
+						font-size: 16px
+						padding: 5px 16px
+						font-weight: 700
+						cursor: pointer
+						@extend %animacion-suave
+						&:hover
+							color: $verde
+							background: transparent
+					.boton-csv
+						background: $gris-dark
+						border: solid 1px $gris-dark
+			.list
+				min-width: 991px
+				margin-bottom: 30px
+				thead
+					background-color: $violeta-dark
+					tr
+						th
+							a
+								color: $blanco
+								display: block
+								padding: 4px 0
+							i
+								color: $blanco
+								transform: rotate(90deg)
+				tbody
+					.item
+						border-bottom: solid 1px $verde
+						td
+							padding: 5px 0
+						td[data-key='activa']
+							width: 75px
+							text-align: center
+						td[data-key='fecha']
+							width: 115px
+							text-align: center
+						td[data-key='foto_id']
+							width: 70px
+							text-align: center
+						td[data-key='titulo']
+							padding-left: 4px
+							width: 150px
+						td[data-key='color']
+							padding-left: 4px
+							width: 150px
+						.js-orden
+							width: 25px
+							text-align: center
+							cursor: pointer
+							i
+								color: grey
+								font-size: 10px
+						.bottons
+							width: 100px
+							text-align: center
+							a
+								display: inline-block
+								vertical-align: middle
+								margin: 0 5px
+			.pager
+				width: 100%
+				margin-top: 15px
+				display: flex
+				justify-content: center
+				align-items: center
+				a
+					background: $violeta
+					padding: 2px 8px
+					border-radius: 3px
+					color: $blanco
+					margin: 0 3px
+				.actual
+					background: $violeta-dark

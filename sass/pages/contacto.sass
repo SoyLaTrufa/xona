@@ -7,6 +7,8 @@
 			padding-top: 200px
 			@media(max-width: 1400px)
 				padding-top: 100px
+			@media(max-width: 640px)
+				padding-top: 60px
 			.top
 				display: flex
 				justify-content: space-between
@@ -17,11 +19,13 @@
 				&:before
 					content: ''
 					position: absolute
-					top: 5px
+					top: 10px
 					left: -100px
 					width: 70px
 					height: 1px
 					background: $amarillo
+					@media(max-width: 1400px)
+						left: -80px
 				.titulo
 					width: 50%
 					@media(max-width: 800px)
@@ -44,6 +48,9 @@
 						@media(max-width: 800px)
 							font-size: 26px
 							line-height: 32px
+						@media(max-width: 640px)
+							font-size: 16px
+							line-height: 20px
 						span
 							@extend %barlow-semibold
 				.form-cont
@@ -52,12 +59,24 @@
 					align-items: flex-start
 					width: 50%
 					padding-top: 20px
+					position: relative
+					font-size: 0
 					@media(max-width: 1540px)
 						padding-top: 0
 					@media(max-width: 800px)
 						width: 100%
+					.alert
+						font-size: 15px
+						width: 75%
+						position: absolute
+						top: -80px
+						left: 0
+						@media(max-width: 800px)
+							position: relative
+							top: 0
 					form
 						width: 100%
+						font-size: 0
 						@media(max-width: 1540px)
 							width: 75%
 						@media(max-width: 800px)
@@ -69,7 +88,7 @@
 							textarea
 								width: 100%
 								border: none
-								border-bottom: solid 2px $blanco
+								border-bottom: solid 2px #C4C4C4
 								background: transparent
 								padding: 18px 0
 								outline: none
@@ -81,6 +100,7 @@
 								@media(max-width: 1540px)
 									padding: 10px 0
 									font-size: 15px
+									line-height: 17px
 								&::placeholder
 									font-size: 14px
 									color: $blanco
@@ -153,8 +173,8 @@
 				padding-top: 80px
 				@media(max-width: 1540px)
 					padding-top: 0
-				@media(max-width: 800px)
-					flex-direction: column
+				@media(max-width: 700px)
+					display: none
 				.tel
 					width: 50%
 					@media(max-width: 800px)
@@ -164,17 +184,21 @@
 						li
 							padding: 10px 0
 							@media(max-width: 1540px)
-								padding: 4px 0
+								padding: 3px 0
 							span
 								color: $blanco
 								font-size: 16px
 								line-height: 21px
 								@extend %bree-regular
+								@media(max-width: 1400px)
+									font-size: 14px
 							a
 								color: $blanco
 								font-size: 16px
 								line-height: 21px
 								@extend %barlow-light
+								@media(max-width: 1400px)
+									font-size: 14px
 								&:hover
 									color: $amarillo
 				.redes
@@ -195,7 +219,9 @@
 						&:hover
 							color: $blanco
 						@media(max-width: 800px)
-							margin: 10px				
+							margin: 10px
+					.email
+						@extend %bree-regular				
 					.red
 						border: solid 1px $amarillo
 						width: 40px
@@ -211,3 +237,64 @@
 								margin-left: 0
 						&:hover
 							transform: rotate(360deg)
+	.s2
+		display: block
+		background: $negro
+		@media(min-width: 700px)
+			display: none
+		.cont-1300
+			.loguito
+				position: absolute
+				top: 20px
+				left: 15px
+		.bottom
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			flex-direction: column
+			// padding-top: 90px
+			.tel
+				width: 100%
+				ul
+					margin-bottom: 0
+					li
+						padding: 10px 0
+						span
+							color: $blanco
+							font-size: 16px
+							line-height: 21px
+							@extend %bree-regular
+						a
+							color: $blanco
+							font-size: 16px
+							line-height: 21px
+							@extend %barlow-light
+							&:hover
+								color: $amarillo
+			.redes
+				width: 100%
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
+				align-items: flex-start
+				margin: 25px 0
+				a
+					color: $amarillo
+					margin: 10px				
+					&:hover
+						color: $blanco
+				.red
+					border: solid 1px $amarillo
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					display: inline-block
+					padding: 4px 5px
+					font-size: 20px
+					transform: rotate(0deg)
+					margin-left: 12px
+					@media(max-width: 800px)
+						&:not(:nth-child(2))
+							margin-left: 0
+					&:hover
+						transform: rotate(360deg)

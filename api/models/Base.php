@@ -161,6 +161,7 @@ abstract Class Base{
 				if($excluir){
 					$filtro = array(
 						'where'  =>  $tabla.'.id NOT IN('.$excluir.')',
+						'order'  => 'RAND() ASC',
 					);
 				}
 				break;

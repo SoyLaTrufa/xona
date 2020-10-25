@@ -188,6 +188,29 @@ Class Formulario{
 		return true;
 	}
 
+	public function llamarApi($url,$queryString=''){
+    $url = 'https://service01.cat-technologies.com:31443/neoapi/webservice.asmx/ExecuteTask04?idTask=148&param1='.$_POST['nombre'].'&param2='.$_POST['apellido'].'&param3='.$_POST['email'].'&param4='.$_POST['tel'].'';
+    if($queryString!=''){
+      $url.= '&'.$queryString;
+    }
+
+    $ch = curl_init();
+    $var = curl_setopt($ch, CURLOPT_URL,$url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $headers = array();
+    $headers[] = 'x-authtoken: '.$this->token;
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    $server_output = curl_exec ($ch);
+    $return = json_decode($server_output);
+    echo "<script>alert('".$_POST['nombre']."')</script>";
+    curl_close($ch);
+    if(isset($return)){
+      return $return;
+    }else{
+      return false;
+    }
+  }
+
 	/** Envía el formulario
 	* Envía el formulario y realiza todas las acciones post envío (guardar en BD datos enviados y contacto)
 	*/
@@ -219,12 +242,12 @@ Class Formulario{
 					// $PHPMailer->SMTPDebug = 4;
 					$PHPMailer->Debugoutput = 'html';
 
-					$PHPMailer->Host = 'base.synapsis.com.ar';
+					$PHPMailer->Host = 'smtp.gmail.com';
 					$PHPMailer->Port = 587;
 					$PHPMailer->SMTPSecure = 'tls';
 					$PHPMailer->SMTPAuth = true;
-					$PHPMailer->Username = 'base';
-					$PHPMailer->Password = '-vCA_%v*1#7.';
+					$PHPMailer->Username = 'weblabarg@gmail.com';
+					$PHPMailer->Password = '111111';
 
 					$PHPMailer->CharSet  = "UTF-8";
 					$PHPMailer->IsHTML(true);

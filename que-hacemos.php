@@ -8,203 +8,210 @@
 //////////////////////////////////
 
   define('SECCION', 'que-hacemos');
-  Plugins::activar('animacion');
+  // Plugins::activar('animacion');
   Plugins::activar('owlCarousel');
+  $casos = Caso::obtener('');
+
 // Fin configuración de la página //
 
   include('header.php');
 
 ?>
 
-<section>
-	<div class="horizontal-scroll">
-  <div class="horizontal-scroll__block horizontal-scroll__block--purple">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/nature/1024x758)"></div>
-    <span class="letter">A</span>
-  </div>
-  <div class="horizontal-scroll__block horizontal-scroll__block--yellow">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/technology/1024x758)"></div>
-    <span class="letter">E</span>
-  </div>
-  <div class="horizontal-scroll__block horizontal-scroll__block--orange">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/buildings/1024x758)"></div>
-    <span class="letter">I</span>
-  </div>
-  <div class="horizontal-scroll__block horizontal-scroll__block--blue">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/food/1024x758)"></div>
-    <span class="letter">O</span>
-  </div>
-  <div class="horizontal-scroll__block horizontal-scroll__block--green">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/people/1024x758)"></div>
-    <span class="letter">U</span>
-  </div>
-  <div class="horizontal-scroll__block horizontal-scroll__block--pink">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/objects/1024x758)"></div>
-    <span class="letter">!</span>
-  </div>
-</div>
-</section>
+<article id="fullpage">
 
-<style type="text/css">
-	/*::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
+  <section class="section s1">
+  	<h4><a href="#casos"><span><i class="icon-right"></i></span>NUESTROS TRABAJOS</a></h4>
 
-::-webkit-scrollbar-button {
-  width: 1px;
-  height: 1px;
-}*/
+  	<div class="mod f1">
+  		<div class="franja-cont">
+        <h3 class="josh-js" data-josh-anim-name="fadeInUp">Marketing de <br> Experiencias</h3>
+        <ul class="josh-js" data-josh-anim-name="fadeInUp">
+          <li><i class="icon-ok"></i>Programas de Incentivo</li>
+          <li><i class="icon-ok"></i>Programas de Relacionamiento</li>
+          <li><i class="icon-ok"></i>Travel Design Experiences</li>
+        </ul>  
+      </div>
+  		<a class="sombra"></a>
+  	</div>
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+  	<div class="mod f2">
+      <div class="franja-cont">
+  	  	<h3 class="josh-js" data-josh-anim-name="fadeInUp" style="animation-delay: .2s">Go Live <br><span>.</span></h3>
+        <ul class="josh-js" data-josh-anim-name="fadeInUp">
+          <li><i class="icon-ok"></i>Lanzamientos</li>
+          <li><i class="icon-ok"></i>Eventos</li>
+          <li><i class="icon-ok"></i>Convenciones</li>
+          <li><i class="icon-ok"></i>Acciones de marca</li>
+          <li><i class="icon-ok"></i>Activaciones</li>
+        </ul>
+      </div>
+  		<a class="sombra"></a>
+  	</div>
 
-html {
-  font-size: 16px;
-}
+  	<div class="mod f3">
+      <div class="franja-cont">
+  		  <h3 class="josh-js" data-josh-anim-name="fadeInUp" style="animation-delay: .4s">Value Content <br> Lab</h3>
+        <ul>
+          <li><i class="icon-ok"></i>Story Brand Building</li>
+          <li><i class="icon-ok"></i>Digital Creative Hub</li>
+          <li><i class="icon-ok"></i>Brand Content</li>
+          <li><i class="icon-ok"></i>Creatividad</li>
+          <li><i class="icon-ok"></i>Trade Marketing / Retail Experience</li>
+        </ul>
+      </div>
+  		<a class="sombra"></a>
+  	</div>
 
-body {
-  overflow: hidden;
-  font-size: 1em;
-}
+  	<div class="mod franja f4">
+      <div class="franja-cont">
+  		  <h3 class="josh-js" data-josh-anim-name="fadeInUp" style="animation-delay: .6s">Comunicación <br><span>.</span></h3>
+        <ul>
+          <li><i class="icon-ok"></i>Estrategias de Reputación y Brand PR</li>
+          <li><i class="icon-ok"></i>Media Relations</li>
+          <li><i class="icon-ok"></i>Comunicaciones Integradas</li>
+        </ul>
+      </div>
+  		<a class="sombra"></a>
+  	</div>
 
-.horizontal-scroll {
-  width: 100vh;
-  height: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: #2E2E2E;
-  padding: 30px;
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
-  -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
-          transform: rotate(-90deg) translate3d(0, -100vh, 0);
-}
-.horizontal-scroll > * {
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-          transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-}
-.horizontal-scroll__block {
-  width: calc(100vh - 60px);
-  height: calc(100vh - 60px);
-  background: #FDFFFC;
-  position: relative;
-}
-.horizontal-scroll__block:not(:first-child) {
-  margin-top: 30px;
-}
-.horizontal-scroll__block .background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: no-repeat center center / cover;
-  opacity: .8;
-  background-blend-mode: luminosity;
-}
-.horizontal-scroll__block .letter {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-  font-weight: normal;
-  font-size: 12em;
-  font-family: 'Playfair Display', serif;
-  color: white;
-}
-.horizontal-scroll__block--purple .background {
-  background-color: #52489C;
-}
-.horizontal-scroll__block--yellow .background {
-  background-color: #ECC30B;
-}
-.horizontal-scroll__block--orange .background {
-  background-color: #F37748;
-}
-.horizontal-scroll__block--blue .background {
-  background-color: #4D9DE0;
-}
-.horizontal-scroll__block--green .background {
-  background-color: #00BD9D;
-}
-.horizontal-scroll__block--pink .background {
-  background-color: #FB9F89;
-}
+  </section>
 
-</style>
+  <section class="s1mobile" id="qs1mobile">
+    <div class="mod f3">
+      <div class="franja-cont">
+        <h3 class="josh-js" data-josh-anim-name="fadeInUp">Value Content Lab</h3>
+        <ul class="josh-js" data-josh-anim-name="fadeInUp">
+          <li><i class="icon-ok"></i>Story Brand Building</li>
+          <li><i class="icon-ok"></i>Digital Creative Hub</li>
+          <li><i class="icon-ok"></i>Brand Content</li>
+          <li><i class="icon-ok"></i>Creatividad</li>
+          <li><i class="icon-ok"></i>Trade Marketing / Retail Experience</li>
+        </ul>
+      </div>
+      <a class="sombra"></a>
+    </div>
 
-<section class="s1">
-	<h4><i class="icon-circle-thin"></i>NUESTROS TRABAJOS</h4>
-	<div class="mod">
-		<h3>Markting de Experiencias</h3>
-		<a class="sombra"></a>
-	</div>
-	<div class="mod">
-		<h3>Go Live</h3>
-		<a class="sombra"></a>
-	</div>
-	<div class="mod">
-		<h3>Value Content Lab</h3>
-		<a class="sombra"></a>
-	</div>
-	<div class="mod">
-		<h3>Comunicación</h3>
-		<a class="sombra"></a>
-	</div><div class="mod">
-		<h3>Comunicación</h3>
-		<a class="sombra"></a>
-	</div><div class="mod">
-		<h3>Comunicación</h3>
-		<a class="sombra"></a>
-	</div>
-</section>
+    <div class="mod franja f4">
+      <div class="franja-cont">
+        <h3 class="josh-js" data-josh-anim-name="fadeInUp">Comunicación</h3>
+        <ul class="josh-js" data-josh-anim-name="fadeInUp">
+          <li><i class="icon-ok"></i>Estrategias de Reputación y Brand PR</li>
+          <li><i class="icon-ok"></i>Media Relations</li>
+          <li><i class="icon-ok"></i>Comunicaciones Integradas</li>
+        </ul>
+      </div>
+      <a class="sombra"></a>
+    </div>
+  </section>
 
-<section class="s3">
-	<div class="cont-1300">
-		<img class="loguito" src="images/icons/x-a.png" alt="Xona">
-		<h2>Nuestros clientes</h2>
-		<div class="slider-clientes">
-			<ul class="owl-carousel">
-		<?php 
-			include('clientes.php');;
-			foreach ($clientes as $key => $logo) { ?>
-				<li>
-					<div class="slide">
-						<?php 
-							foreach ($logo as $key => $l) {
-								echo '<img src="'.$l.'">';
-							}
-						 ?>
-					</div>
-				</li>
-			<?php }
-		 ?>
-			</ul>
-		</div>
-	</div>
-</section>
+  <?php 
+    $cas = array(
+      (object) array(
+        'img' => 'images/temp/caso1.jpg',
+        'titulo' => 'LOREM IPSUM',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+      (object) array(
+        'img' => 'images/temp/caso2.jpg',
+        'titulo' => 'LOREM IPSUM 2',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+      (object) array(
+        'img' => 'images/temp/caso3.jpg',
+        'titulo' => 'LOREM IPSUM 3',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+      (object) array(
+        'img' => 'images/temp/caso4.jpg',
+        'titulo' => 'LOREM IPSUM 4',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ), (object) array(
+        'img' => 'images/temp/caso5.jpg',
+        'titulo' => 'LOREM IPSUM 5',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+      (object) array(
+        'img' => 'images/temp/caso6.jpg',
+        'titulo' => 'LOREM IPSUM 6',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+      (object) array(
+        'img' => 'images/temp/caso7.jpg',
+        'titulo' => 'LOREM IPSUM 7',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+      (object) array(
+        'img' => 'images/temp/caso8.jpg',
+        'titulo' => 'LOREM IPSUM 8',
+        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
+      ),
+    );
 
-<section class="s4">
-	<div class="cont-1300">
-		<img class="loguito" src="images/icons/x-a.png" alt="Xona">
-		<div class="bloque wow zoomIn">
-			<div class="mod wow rollIn" data-wow-delay=".5s">
-				<h2 class="wow fadeInUp" data-wow-delay="1s">Buscamos ser recordados <span>por cómo los hicimos sentir</span> </h2>
-				<p class="wow slideInUp" data-wow-delay="1.3s">A los clientes, en el proceso. A sus audiencias, en los resultados.</p>
-				<a href="#" class="wow fadeIn" data-wow-delay="1.5s"><i class="icon-circle-thin"></i>CONTACTANOS</a>
-			</div>
-		</div> 
-	</div>
-</section>
+    $mitad = round(count($casos)/2);
+   ?>   
+  <section class="section s2" id="casos">
+    <i class="icon-right" id="nextItem"></i>
+    <div class="slider-casosTop">
+      <ul class="owl-carousel">
+      <?php 
+        foreach ($casos as $key => $caso) {
+          echo '<li><a href="'.$caso->url.'" class="item" style="background-image: url('.$caso->foto->src.')">';
+          echo '<div class="caso-hover"><h4>'.$caso->titulo.'</h4><p>'.$caso->bajada.'</p>';
+          echo '<i class="icon-right"></i></div></a></li>';
+          if ($key+1 == $mitad) {
+            echo "</ul>";
+            echo "</div>";
+            echo '<div class="slider-casosDown"><ul class="owl-carousel">';
+            continue;
+            echo '<li><a href="#" class="item" style="background-image: url('.$caso->img.')">';
+            echo '<div class="caso-hover"><h4>'.$caso->titulo.'</h4><p>'.$caso->bajada.'</p>';
+            echo '<i class="icon-right"></i>';
+            echo '</div></a></li></ul></div>';
+          }
+        }
+       ?>
+  </section>
+  
+  <section class="section s3">
+  	<div class="cont-1300">
+  		<img class="loguito" src="images/icons/x-a.png" alt="Xona">
+  		<div class="slider-clientes">
+  		  <h2 class="josh-js" data-josh-anim-name="zoomIn">Nuestros clientes</h2>
+  			<ul class="owl-carousel">
+  		<?php 
+  			include('clientes.php');
+  			foreach ($clientes as $key => $logo) { ?>
+  				<li>
+  					<div class="item">
+  						<?php 
+  							foreach ($logo as $key => $l) {
+  								echo '<img src="'.$l.'">';
+  							}
+  						 ?>
+  					</div>
+  				</li>
+  			<?php }
+  		 ?>
+  			</ul>
+  		</div>
+  	</div>
+  </section>
+
+  <section class="section s4">
+  	<div class="cont-1300">
+  		<img class="loguito" src="images/icons/x-a.png" alt="Xona">
+  		<div class="bloque josh-js" data-josh-anim-name="zoomIn">
+  			<div class="mod josh-js" data-josh-anim-name="fadeIn" style="animation-delay: .5s">
+  				<h2 class="josh-js" data-josh-anim-name="fadeInUp" style="animation-delay: 1s">Buscamos ser recordados <span>por cómo los hicimos sentir</span> </h2>
+  				<p class="josh-js" data-josh-anim-name="fadeInUp" style="animation-delay: 1.3s">A los clientes, en el proceso. A sus audiencias, en los resultados.</p>
+  				<a href="<?=url('contacto')?>" class="josh-js" data-josh-anim-name="fadeIn" style="animation-delay: 1.5s"><span><i class="icon-right"></i></span>CONTACTANOS</a>
+  			</div>
+  		</div> 
+  	</div>
+  </section>
+
+</article>
+
 
 <?php include('footer.php'); ?>

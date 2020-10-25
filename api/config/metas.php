@@ -62,6 +62,14 @@ return array(
 				'img' => '',
 			),
 		),
+
+		'caso-ficha' => array(
+			'es' => array(
+				'titulo' => 'Casos de éxito',
+				'descripcion' => '',
+				'img' => '',
+			),
+		),
 		'contacto' => array(
 			'es' => array(
 				'titulo' => 'Contacto',

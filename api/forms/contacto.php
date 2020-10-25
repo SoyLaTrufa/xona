@@ -5,16 +5,14 @@ include_once('core/Formulario.php');
 $form_contacto = new Formulario(
 	array(
 		'destinatarios' => array(
-			// Mientras el sitio este en desarrollo probar el funcionamiento del formulario con una cuenta alternativa. Luego en el proceso de publicado, dejar funcionando con el mail del cliente
-			// Config::obtener('empresa')->email,
-			// 'mailParaTestear@hotmail.com',
-			'soporte@synapsis.com.ar'
+			// 'hola@xona.com.ar',
+			'weblabarg@gmail.com'
 		),
 		'asunto' 	=> 'Contacto - '.Config::obtener('empresa')->nombre,
 		'remitente' => array(
 			'nombre' => 'Web '.Config::obtener('empresa')->nombre,
 			// Completar con el dominio del cliente ej: web@kodent.com.ar
-			'email' => 'web@synapsis.com.ar' // Email ficticio 
+			'email' => 'web@xona.com.ar' // Email ficticio 
 		),
 		'responder_a' => array(
 			'nombre' => 'nombre',
@@ -34,9 +32,23 @@ $form_contacto->agregarCampos(
 
 		array(
 			'name' 		=> 'nombre',
-			'label' 	=> 'Apellido y Nombre',
+			'label' 	=> 'Nombre',
 			'tipo' 		=> 'text',
 			'validar' 	=> array('requerido'),
+		),
+
+		array(
+			'name' 		=> 'empresa',
+			'label' 	=> 'Empresa',
+			'tipo' 		=> 'text',
+			'validar' 	=> array('requerido'),
+		),
+
+		array(
+			'name' 		=> 'email',
+			'label' 	=> 'Email',
+			'tipo' 		=> 'email',
+			'validar' 	=> array('formato', 'requerido'),
 		),
 
 		array(
@@ -47,62 +59,36 @@ $form_contacto->agregarCampos(
 		),		
 
 		array(
-			'name' 		=> 'email',
-			'label' 	=> 'Email',
-			'tipo' 		=> 'email',
-			'validar' 	=> array('formato', 'requerido'),
-		),
-
-		array(
-			'name' 		=> 'opciones',
-			'label' 	=> 'Opciones',
-			'tipo' 		=> 'select',
-			'validar' 	=> array('requerido'),
-		),
-
-		array(
-			'name' 		=> 'horario',
-			'label' 	=> 'Horario',
-			'tipo' 		=> 'radio',
-			'validar' 	=> array('requerido'),
-		),
-
-		array(
-			'name' 		=> 'interes',
-			'label' 	=> 'Qué te interesa aprender?',
-			'tipo' 		=> 'checkbox',
-			'validar' 	=> array('requerido'),
-		),
-
-		array(
-			'name' 		=> 'mensaje',
-			'label' 	=> 'Mensaje',
+			'name' 		=> 'consulta',
+			'label' 	=> 'Consulta',
 			'tipo' 		=> 'textarea',
 			'validar' 	=> array('requerido'),
-		),
-
-		array(
-			'name' 		=> 'captcha',
-			'label' 	=> 'Captcha',
-			'tipo' 		=> 'Captcha',
-			 'validar' 	=> array('requerido'),
 		),
 
 	)
 );
 
-// Solo usar si hay idioma
-	// $form_contacto->agregarMensajeEstado(
-	// 	array (
-	// 		'incompleto'       =>  __('msj-incompleto'),
-	// 		'error'            =>  __('msj-error'),
-	// 		'mail_invalido'    =>  __('msj-mail_invalido'),
-	// 		'captcha_invalido' =>  __('msj-captcha_invalido'),
-	// 		'ok'               =>  __('msj-ok'),
-	// 	)
-	// );
 
 // enviar_contacto tiene que corresponder con el name del botón de submit
 if( isset($_POST['enviar_contacto']) ){
-	$form_contacto->enviar();
+	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
+      // Build POST request:
+      $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+      $recaptcha_secret = '6Lf1q9kZAAAAAJocgcyoLbbMU4DclPv9jL6F2wzP';
+      $recaptcha_response = $_POST['recaptcha_response'];
+
+      // Make and decode POST request:
+			$handle = curl_init($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+			curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+
+			$recaptcha = curl_exec($handle);
+			curl_close($handle);
+
+			$recaptcha = json_decode($recaptcha);
+
+      // Take action based on the score returned:
+      if ($recaptcha->success AND $recaptcha->score >= 0.5) {
+				$form_contacto->enviar();
+      }
+  }
 }

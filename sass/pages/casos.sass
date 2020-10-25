@@ -1,81 +1,195 @@
-.s_casos-de-exito
+.s_casos-de-exito,
+.s_caso-ficha
 	.s1
-		background-image: url('../images/casos/bg.jpg')
 		background-repeat: no-repeat
 		background-position: center center
 		background-size: cover
 		background-attachment: fixed
-		display: flex
-		justify-content: flex-start
-		align-items: flex-end
-		@media(max-width: 860px)
-			// height: auto
-		.caja
-			width: 66.6%
-			padding: 50px 70px 50px 95px
-			background: $blanco
-			@media(max-width: 860px)
-				width: 100%
-				padding: 30px 15px
-			h5
-				@extend %bree-regular
-				color: $gris
-				font-size: 14px
-				line-height: 24px
-			h1
-				font-size: 36px
-				line-height: 48px
-				margin-bottom: 30px
-				color: $gris
-				@media(max-width: 570px)
-					font-size: 24px
-					line-height: 30px
-					margin-bottom: 15px
-			p
-				@extend %barlow-light
-				font-size: 20px
-				line-height: 30px
-				@media(max-width: 570px)
-					font-size: 16px
-					line-height: 20px
-	.casos
-		background-image: url('../images/casos/bg.jpg')
-		background-repeat: no-repeat
-		background-position: center center
-		background-attachment: fixed
-		background-size: cover
-		display: flex
-		flex-wrap: wrap
-		@media(max-width: 860px)
-			height: auto
-		.mod
-			width: 33.33%
-			height: 50vh
-			border: solid 1px $blanco
-			@media(max-width: 860px)
-				width: 50%
-			@media(max-width: 570px)
-				width: 100%
-		.mod-txt
-			background-color: $blanco
+		.box
 			display: flex
-			justify-content: center
-			align-items: center
-			padding: 15px 70px
-			@media(max-width: 1200px)
-				padding: 15px 25px
-			p
-				@extend %barlow-light
-				font-size: 20px
-				line-height: 30px
+			justify-content: flex-start
+			align-items: flex-end
+			height: 100vh
+			.caja
+				width: 66.6%
+				padding: 50px 70px 50px 95px
+				background: $blanco
+				@media(max-width: 860px)
+					width: 100%
+					padding: 30px 15px
+				h5
+					@extend %bree-regular
+					color: $gris
+					font-size: 14px
+					line-height: 24px
+					text-transform: uppercase
+				h1
+					font-size: 36px
+					line-height: 48px
+					margin-bottom: 30px
+					color: $gris
+					text-transform: uppercase
+					@media(max-width: 570px)
+						font-size: 24px
+						line-height: 30px
+						margin-bottom: 15px
+				p
+					@extend %barlow-light
+					font-size: 20px
+					line-height: 30px
+					@media(max-width: 570px)
+						font-size: 16px
+						line-height: 20px
+						padding-bottom: 40px
+	.casos
+		background-repeat: no-repeat
+		background-position: center center
+		background-attachment: fixed
+		background-size: cover
+		.box
+			height: 100vh
+			display: flex
+			flex-wrap: wrap
+			@media(max-width: 700px)
+				height: auto
+			.mod
+				width: 33.33%
+				height: 50vh
+				border: solid 1px $blanco
+				position: relative
+				@media(max-width: 860px)
+					width: 50%
+				@media(max-width: 570px)
+					width: 100%
+				.tapa
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					z-index: 5
+				.embed-responsive,
+				iframe
+					height: 100%
+					width: 100%
+					z-index: 1
+					.html5-video-player
+						svg
+							display: none !important
+			.mod-txt
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 15px 70px
 				@media(max-width: 1200px)
-					font-size: 16px
-					line-height: 21px
-		.mod-bg
-			background-size: cover
-			background-position: center center
-			background-repeat: no-repeat
-		.mod-large
-			width: 66.6%
-			@media(max-width: 860px)
+					padding: 15px 25px
+				p
+					@extend %barlow-light
+					font-size: 20px
+					line-height: 30px
+					@media(max-width: 1200px)
+						font-size: 16px
+						line-height: 21px
+			.mod-video
+				cursor: pointer
+				position: relative
+				i
+					display: block
+					position: absolute
+					top: 46%
+					left: 50%
+					transform: translate(-50%)
+					cursor: pointer
+					font-size: 40px
+					border: solid 1px $negro
+					width: 70px
+					height: 70px
+					padding: 1px 8px
+					border-radius: 50%
+					z-index: 99
+					@extend %animacion-suave
+				&:hover
+					i
+						color: $rojo
+						border: solid 1px $rojo
+			.mod-bg
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+			.mod-large
+				width: 66.6%
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+				@media(max-width: 860px)
+					width: 100%
+			.mod-full
 				width: 100%
+				background-color: $blanco
+				.cont-975
+					display: flex
+					justify-content: space-between
+					align-items: center
+					height: 100%
+					@media(max-width: 700px)
+						flex-direction: column
+						padding: 40px 15px
+					.volver
+						a
+							@extend %bree-regular
+							font-size: 14px
+							line-height: 20px
+							color: $gris
+							letter-spacing: 3px
+							padding-left: 35px
+							text-transform: uppercase
+							position: relative
+							&:hover
+								color: $amarillo
+							i
+								position: absolute
+								top: 0
+								left: 0
+								color: $amarillo
+								border: solid 1px $amarillo
+								border-radius: 50%
+								display: block
+								width: 22px
+								height: 22px
+								transform: rotate(180deg)
+					.proximo
+						display: flex
+						@media(max-width: 700px)
+							text-align: center
+							padding: 40px 0 20px
+						.txt
+							display: inline-block
+							vertical-align: top
+							padding-left: 15px
+							@media(max-width: 700px)
+								padding-left: 0
+							h5
+								@extend %bree-regular
+								font-size: 14px
+								line-height: 20px
+								color: $gris
+								letter-spacing: 3px
+							h3
+								color: $gris
+								font-size: 40px
+								line-height: 48px
+								margin-bottom: 30px
+								@extend %animacion-suave
+							i
+								color: $amarillo
+								border: solid 1px $amarillo
+								border-radius: 50%
+								width: 22px
+								height: 22px
+								display: block
+								font-size: 14px
+								@media(max-width: 700px)
+									margin: 0 auto
+						&:hover
+							h3
+								color: $amarillo

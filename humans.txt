@@ -1,12 +1,7 @@
 ﻿
 /* EQUIPO */
-	Synapsis CI - Argentina
-	Front-End: Mariano Alvarez Hayes
+	Front-End & Back-end: Mariano Alvarez Hayes
 	Email:  marianoalvareztt@gmail.com
-	Ubicación: Capital Federal, Argentina.
-
-	Back-end: 
-	Email: desarrollo [at] synapsis.com.ar
 	Ubicación: Capital Federal, Argentina.
 
 

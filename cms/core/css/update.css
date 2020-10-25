@@ -1,0 +1,74 @@
+.s_cms .wrap-logueado #content .list tbody .item td[data-key='valor_unidad'] {
+  padding-left: 4px;
+  width: 120px;
+  }
+
+  /*Popup iframe*/
+#fancybox-wrap{
+  	top: 15px !important;
+  	left: 25px !important;
+  }
+#fancybox-wrap,
+#fancybox-content{
+    width: 85vw !important;
+    max-width: 1025px;
+    padding: 10px;
+}
+    .vista-modo_popup{
+        overflow-x: hidden;
+    }
+        .vista-modo_popup #content{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+            .vista-modo_popup .form.registro{
+                margin-left: 0;
+            }
+
+/*Popup fotos*/
+.popup-fotos #fancybox-wrap,
+.popup-fotos #fancybox-content{
+    width: auto !important;
+}
+
+#fancybox-content .boton{
+	color: #fff;
+	background-color: #000;
+	padding: 6px 14px;
+	cursor: pointer;;
+}
+
+.s_cms .wrap-logueado #content .list tbody .item td{
+  width: 150px;
+  font-size: 14px;
+  padding-left: 4px;
+}
+.s_cms .wrap-logueado #content .list tbody .item .bottons{
+  font-size: 20px !important;
+}
+.s_cms header{
+  background: #2D2C30 !important;
+}
+.s_cms #footer{
+  background: #2D2C30 !important;  
+}
+.s_cms #topmenu{
+  background: #2D2C30 !important;
+}
+.s_cms .wrap-logueado #content .list thead{
+  background: #2D2C30 !important;
+}
+.s_cms header .logo img{
+  width: 16px !important;
+}
+.s_cms .login-wrapper .login form fieldset input{
+  border-bottom: solid 1px #F7B90E !important;
+}
+.s_cms .login-wrapper .login form button[type=submit]{
+  border: solid 1px #F7B90E !important;
+  background: #F7B90E !important;
+}
+.s_cms .wrap-logueado #content #box form fieldset .campos .qq-upload-button{
+  background: #2D2C30 !important;
+  border: solid 1px #2D2C30 !important;
+}

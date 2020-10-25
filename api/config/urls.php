@@ -41,7 +41,6 @@
 return array(
 
 	'home' => '',
-	'noticia' => '(es:noticias|en:news)/{id}-{nombre}',
-	'noticias-anio' => 'noticias/{anio}',
+	'caso-ficha' => 'caso/{id}-{uri}'
 
 );

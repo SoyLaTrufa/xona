@@ -54,7 +54,9 @@
     # Options +SymLinksIfOwnerMatch
 
     # (4)
-     RewriteBase /biribiri/xona/web/
+     RewriteBase /
+     # RewriteBase /biribiri/xona/web/
+     # RewriteBase /wp_xona/desarrollo/
 
     # (5)
     # RewriteOptions <options>
@@ -162,9 +164,11 @@ RewriteRule ^ejemplo/([0-9]+)-([^/]+)/?$     ejemplo.php?id=$1  [QSA,L]
 
 ### Oculto las URL del CMS ###
 RewriteRule ^images/galleries/(.*)     /cms/resources/galleries/$1  [QSA,L]
-RewriteRule ^images/(ejemplo)/(.*)     /cms/resources/images/$1/$2  [QSA,L]
-RewriteRule ^archivos/(ejemplo)/(.*)   /cms/resources/files/$1/$2   [QSA,L]
+RewriteRule ^images/(casos)/(.*)     /cms/resources/images/$1/$2  [QSA,L]
+RewriteRule ^archivos/(casos)/(.*)   /cms/resources/files/$1/$2   [QSA,L]
 ##############################
+
+RewriteRule ^caso/([0-9]+)-([^/]+)/?$   caso-ficha.php?id=$1  [QSA,L]
 
 # Remuevo la barra del final, a no ser que sea un directorio
 RewriteCond %{REQUEST_FILENAME} !-d

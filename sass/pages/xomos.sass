@@ -1,6 +1,23 @@
 .s_xomos
 	.s1
-		background: green
+		overflow: hidden
+		.video-cont
+			position: relative
+			height: 100vh
+			overflow: hidden
+			video
+				position: absolute
+				top: 0
+				left: 0
+				min-width: 100%
+				min-height: 100%
+				cursor: pointer
+				@media(max-width: 1400px)
+					left: -18%
+					top: -15%
+				@media(max-width: 640px)
+					left: -135%
+					top: 0
 		.cont-1300
 			height: 100vh
 			display: flex
@@ -14,39 +31,53 @@
 		.cont-1300
 			position: relative
 			height: 100vh
-			padding-top: 80px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			@media(max-width: 640px)
+				height: calc(100vh - 60px)
 			.loguito
 				position: absolute
-				top: 50px
+				top: 20px
 				left: 15px
 			.bloque
+				width: 100%
+				height: 100vh
+				display: flex
+				align-items: center
 				background-image: url('../images/xomos/s2.jpg')
 				background-size: initial
 				background-repeat: no-repeat
-				background-position: right top
-				height: calc(100vh - 80px)
-				border: solid 1px $blanco
+				background-position: right center
+				@media(max-width: 1400px)
+					background-size: 45%
+					background-position: 70% center
+				@media(max-width: 991px)
+					background: inherit
 				@media(max-width: 640px)
-					background-image: unset
-					margin-top: 0
+					height: calc(100vh - 60px)
 				.mod
 					width: 580px
-					margin-top: 125px
-					padding: 40px 0 60px
+					padding: 60px 0
 					background: $blanco
 					position: relative
 					@media(max-width: 1400px)
-						margin-top: 75px
-					@media(max-width: 640px)
+						padding-left: 80px
+					@media(max-width: 991px)
+						padding: 0
 						width: 100%
 					&:before
 						content: ''
 						position: absolute
-						top: 50px
-						left: -100px
+						top: 70px
+						left: -90px
 						width: 70px
 						height: 1px
 						background: $amarillo
+						@media(max-width: 1400px)
+							left: -20px
+						@media(max-width: 640px)
+							display: none
 					h5
 						font-size: 14px
 						line-height: 16px
@@ -79,43 +110,58 @@
 					i
 						color: $amarillo
 	.s3
-		padding: 50px 0 0
+		overflow: hidden
 		.cont-1300
+			position: relative
+			height: 100vh
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			@media(max-width: 640px)
+				height: calc(100vh - 60px)
+			.loguito
+				position: absolute
+				top: 20px
+				left: 15px
 			.bloque-cont
+				width: 100%
+				height: 100vh
+				display: flex
+				justify-content: flex-end
+				align-items: center
 				background-image: url('../images/xomos/s3.jpg')
 				background-size: initial
 				background-repeat: no-repeat
-				background-position: left top
-				border: solid 1px $blanco
-				margin-top: 40px
-				padding-bottom: 130px
-				display: flex
-				justify-content: flex-end
+				background-position: left center
 				@media(max-width: 1400px)
-					padding-bottom: 30px
-					padding-bottom: 0
+					background-size: 45%
+					background-position: 15% center
+					padding-right: 120px
+				@media(max-width: 991px)
+					background: inherit
+					padding: 0
 				@media(max-width: 640px)
-					background-image: unset
-					margin-top: 0
+					height: calc(100vh - 60px)
 				.bloque
 					width: 580px
-					margin-top: 60px
-					padding: 40px 15px 40px 70px
+					padding: 60px 0 60px 70px
 					background: $blanco
 					position: relative
 					@media(max-width: 1400px)
-						margin-top: 15px
-					@media(max-width: 640px)
+						padding: 20px 15px 20px 70px
+					@media(max-width: 991px)
+						padding-left: 0
 						width: 100%
-						padding: 15px 0
 					&:before
 						content: ''
 						position: absolute
-						top: 50px
+						top: 45px
 						left: 100%
 						width: 70px
 						height: 1px
 						background: $amarillo
+						@media(max-width: 640px)
+							display: none
 					h5
 						font-size: 14px
 						line-height: 16px
@@ -129,14 +175,23 @@
 						margin-bottom: 30px
 						color: $gris
 						@media(max-width: 1400px)
-							font-size: 28px
-							line-height: 34px
-							margin-bottom: 10px
+							font-size: 24px
+							line-height: 28px
+							margin-bottom: 5px
 						span
 							@extend %barlow-bold
 						@media(max-width: 640px)
-							font-size: 22px
-							line-height: 28px
+							font-size: 18px
+							line-height: 24px
+					h6
+						@extend %bree-regular
+						font-size: 16px
+						line-height: 24px
+						margin-top: 20px
+						@media(max-width: 640px)
+							font-size: 14px
+							line-height: 18px
+							margin-top: 10px
 					.iconos
 						display: flex
 						justify-content: space-between
@@ -146,7 +201,7 @@
 							margin-bottom: 10px
 							@media(max-width: 640px)
 								width: calc(50% - 30px)
-								margin: 15px
+								margin: 10px
 							img
 								width: 60px
 							p
@@ -155,25 +210,35 @@
 								color: $gris
 								@media(max-width: 400px)
 									font-size: 14px
+									line-height: 18px
 	.s4
 		.cont-1300
 			position: relative
 			height: 100vh
 			padding-top: 80px
+			@media(max-width: 640px)
+				height: calc(100vh - 60px)
 			.loguito
 				position: absolute
-				top: 50px
+				top: 20px
 				left: 15px
 			.bloque
 				width: 100%
 				font-size: 0
+				@media(max-width: 960px)
+					padding-top: 40px
 				.mod
-					width: 500px
+					width: 450px
 					padding: 0
 					background: $blanco
 					display: inline-block
 					vertical-align: middle
 					position: relative
+					@media(max-width: 1400px)
+						padding-left: 80px					
+					@media(max-width: 960px)
+						width: 100%
+						padding-left: 0
 					&:before
 						content: ''
 						position: absolute
@@ -182,6 +247,10 @@
 						width: 70px
 						height: 1px
 						background: $amarillo
+						@media(max-width: 1400px)
+							left: -20px
+						@media(max-width: 640px)
+							display: none
 					h5
 						font-size: 14px
 						line-height: 16px
@@ -198,6 +267,9 @@
 							font-size: 26px
 							line-height: 32px
 							margin-bottom: 15px
+						@media(max-width: 960px)
+							font-size: 22px
+							line-height: 26px
 						span
 							@extend %barlow-bold
 					p
@@ -211,9 +283,55 @@
 							font-size: 18px
 							line-height: 26px
 							margin-bottom: 15px
-				.gif
-					width: 39vw
-					max-width: 39vw
+					a
+						color: $gris
+						font-size: 14px
+						line-height: 20px
+						letter-spacing: 4px
+						@extend %bree-regular
+						span
+							display: inline-block
+							border: solid 1px $amarillo
+							border-radius: 50%
+							width: 22px
+							height: 22px
+							margin-right: 10px
+							font-size: 11px
+							padding-left: 2px
+							padding-bottom: 2px
+						i
+							color: $amarillo
+				.video-cont
+					width: calc(100% - 480px)
+					height: 85vh
 					margin-left: 30px
-					// @media(max-width: 1550px)
-					// 	max-width: 500px
+					display: inline-block
+					vertical-align: middle
+					text-align: center
+					overflow: hidden
+					position: relative
+					@media(max-width: 960px)
+						display: none
+					.video
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						// border: solid 1px red
+	.s5
+		display: block
+		@media(min-width: 700px)
+			display: none
+		.video-mobile
+			width: 100%
+			height: 85vh
+			overflow: hidden
+			// position: relative
+			.video
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				// border: solid 1px red

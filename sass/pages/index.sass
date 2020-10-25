@@ -1,72 +1,109 @@
 .s_home
 	.s1
-		background-image: url('../images/home/banner-top.jpg')
-		background-size: cover
-		background-repeat: no-repeat
-		background-position: center center
-		.cont-1300
-			height: 100%
-			display: flex
-			flex-direction: column
-			justify-content: center
-			h1
-				color: $blanco
-				font-size: 55px
-				line-height: 65px
-				max-width: 715px
-				margin-top: 70px
+		// background-image: url('../images/home/banner-top.jpg')
+		// background-size: cover
+		// background-repeat: no-repeat
+		// background-position: center center
+		background: #000
+		.video-cont
+			position: relative
+			height: 100vh
+			overflow: hidden
+			video
+				position: absolute
+				top: 0
+				left: 0
+				min-width: 100%
+				min-height: 100%
+				cursor: pointer
+				@media(max-width: 1400px)
+					left: -18%
+					top: -15%
 				@media(max-width: 640px)
-					font-size: 28px
+					left: -135%
+					top: 0
+			.cont-1300
+				height: 100%
+				display: flex
+				flex-direction: column
+				justify-content: center
+				h1
+					color: $blanco
+					font-size: 55px
+					line-height: 65px
+					max-width: 715px
+					margin-top: 70px
+					@media(max-width: 640px)
+						font-size: 28px
+						line-height: 36px
+						max-width: 100%
+				p
+					color: $blanco
+					font-size: 24px
 					line-height: 36px
-					max-width: 100%
-			p
-				color: $blanco
-				font-size: 24px
-				line-height: 36px
-				margin: 70px 0
-				max-width: 715px
-				@media(max-width: 640px)
-					font-size: 18px
-					line-height: 26px
-					max-width: 100%
-					margin-top: 30px
-			.mouse
-				align-self: center
-				animation: levitate 1.5s infinite
+					margin: 70px 0
+					max-width: 715px
+					@media(max-width: 640px)
+						font-size: 18px
+						line-height: 26px
+						max-width: 100%
+						margin-top: 30px
+				.mouse
+					align-self: center
+					animation: levitate 1.5s infinite
 	.s2
-		padding: 50px 0 0
 		.cont-1300
-			.bloque-cont
+			position: relative
+			height: 100vh
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			@media(max-width: 640px)
+				height: calc(100vh - 60px)
+				flex-direction: column
+				align-items: flex-start
+			.loguito
+				position: absolute
+				top: 20px
+				left: 15px
+			.bloque
+				width: 100%
+				height: 100vh
+				display: flex
+				align-items: center
 				background-image: url('../images/home/xomos.jpg')
 				background-size: initial
 				background-repeat: no-repeat
-				background-position: right top
-				border: solid 1px $blanco
-				margin-top: 40px
-				padding-bottom: 130px
+				background-position: right center
 				@media(max-width: 1400px)
-					padding-bottom: 30px
+					background-size: 45%
+					background-position: 70% center
+				@media(max-width: 991px)
+					background: inherit
 				@media(max-width: 640px)
-					background-image: unset
-					margin-top: 0
-				.bloque
+					height: calc(100vh - 60px)
+				.mod
 					width: 580px
-					margin-top: 125px
-					padding: 40px 0 60px
+					padding: 60px 0
 					background: $blanco
 					position: relative
 					@media(max-width: 1400px)
-						margin-top: 75px
-					@media(max-width: 640px)
+						padding-left: 80px
+					@media(max-width: 991px)
+						padding: 0
 						width: 100%
 					&:before
 						content: ''
 						position: absolute
-						top: 50px
-						left: -100px
+						top: 70px
+						left: -90px
 						width: 70px
 						height: 1px
 						background: $amarillo
+						@media(max-width: 1400px)
+							left: -20px
+						@media(max-width: 640px)
+							display: none
 					h5
 						font-size: 14px
 						line-height: 16px
@@ -83,6 +120,12 @@
 							font-size: 38px
 							line-height: 42px
 							margin-bottom: 15px
+						@media(max-width: 640px)
+							font-size: 28px
+							line-height: 32px
+							margin-bottom: 10px
+						span
+							@extend %barlow-bold
 					p
 						@extend %barlow-light
 						font-size: 20px
@@ -99,6 +142,7 @@
 						font-size: 14px
 						line-height: 20px
 						letter-spacing: 4px
+						@extend %bree-regular
 						span
 							display: inline-block
 							border: solid 1px $amarillo
@@ -112,16 +156,68 @@
 						i
 							color: $amarillo
 	.s3
-		background: green
-		.cont-1300
+		overflow: hidden
+		.video-cont
+			position: relative
 			height: 100vh
-			display: flex
-			justify-content: center
-			align-items: center
-			h2
-				color: $blanco
-				font-size: 55px
-				line-height: 65px
+			overflow: hidden
+			// padding-bottom: 56.25%
+			// padding-top: 0
+			// height: 0
+			iframe
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100vh
+			video
+				position: absolute
+				top: 0
+				left: 0
+				min-width: 100%
+				min-height: 100%
+				cursor: pointer
+				@media(max-width: 1400px)
+					left: -18%
+					top: -15%
+				@media(max-width: 640px)
+					left: -135%
+					top: 0
+			.vplay
+				display: block
+				position: absolute
+				top: 46%
+				left: 50%
+				transform: translate(-50%)
+				cursor: pointer
+				font-size: 24px
+				border: solid 1px $negro
+				width: 40px
+				height: 40px
+				padding: 1px 4px
+				border-radius: 50%
+				z-index: 99
+				@media(min-width: 1400px)
+					border: solid 2px $negro
+					width: 100px
+					height: 100px
+					font-size: 58px
+					padding: 1px 12px
+			.portada-video
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				z-index: 90
+
+		// 	height: 100vh
+		// 	display: flex
+		// 	justify-content: center
+		// 	align-items: center
+		// 	h2
+		// 		color: $blanco
+		// 		font-size: 55px
+		// 		line-height: 65px
 	.s4
 		background: $negro
 		.cont-1300
@@ -130,10 +226,12 @@
 			justify-content: center
 			align-items: center
 			position: relative
-			img
+			@media(max-width: 640px)
+				height: calc(100vh - 60px)
+			.loguito
 				position: absolute
-				top: 50px
-				left: 0
+				top: 20px
+				left: 15px
 			.bloque
 				width: 820px
 				height: 400px
@@ -196,31 +294,43 @@
 						i
 							color: $amarillo
 	.s5
-		padding: 50px 0 0
 		.cont-1300
+			position: relative
+			height: 100vh
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			@media(max-width: 640px)
+				height: calc(100vh - 60px)
+			.loguito
+				position: absolute
+				top: 20px
+				left: 15px
 			.bloque-cont
+				width: 100%
+				height: 100vh
+				display: flex
+				align-items: center
 				background-image: url('../images/home/s5.jpg')
 				background-size: initial
 				background-repeat: no-repeat
-				background-position: right top
-				border: solid 1px $blanco
-				margin-top: 40px
-				padding-bottom: 130px
+				background-position: right center
 				@media(max-width: 1400px)
-					padding-bottom: 30px
+					background-size: 45%
+					background-position: 70% center
+				@media(max-width: 991px)
+					background: inherit
 				@media(max-width: 640px)
-					background-image: unset
-					margin-top: 0
+					height: calc(100vh - 60px)
 				.bloque
 					width: 580px
-					margin-top: 125px
 					padding: 60px 0
 					background: $blanco
 					@media(max-width: 1400px)
-						margin-top: 75px
-					@media(max-width: 640px)
+						padding-left: 80px
+					@media(max-width: 991px)
+						padding-left: 0
 						width: 100%
-						margin-top: 25px
 					h2
 						font-size: 40px
 						line-height: 48px
@@ -251,6 +361,7 @@
 						font-size: 14px
 						line-height: 20px
 						letter-spacing: 4px
+						@extend %bree-regular
 						span
 							display: inline-block
 							border: solid 1px $amarillo
