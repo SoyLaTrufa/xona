@@ -24,6 +24,7 @@ class Casos_model extends MY_Model {
 		's2_c1_foto',
 		's2_c2_text',
 		's2_c3_foto',
+		's2_c3_video',
 		's2_c4_video',
 		's2_c5_foto',
 		's2_c6_foto',
@@ -50,6 +51,7 @@ class Casos_model extends MY_Model {
 		's5_c4_foto',
 		's5_c5_texto',
 		's5_c6_foto',
+		's5_c6_video',
 
 		// scroll 6
 		's6_c1_foto_large',

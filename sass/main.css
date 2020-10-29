@@ -27,7 +27,7 @@ a:hover, a:focus {
 }
 
 /* Animación suave */
-a, .s_que-hacemos .s1 h4 span,
+a, .s_home .s3 .video-cont .vplay i, .s_xomos .s1 .video-cont .playxomos i, .s_que-hacemos .s1 h4 span,
 .s_que-hacemos .s1mobile h4 span, .s_que-hacemos .s2 .slider-casosTop ul li .item .caso-hover,
 .s_que-hacemos .s2 .slider-casosDown ul li .item .caso-hover, .s_que-hacemos .s2 #nextItem, .s_casos-de-exito .casos .box .mod-video i,
 .s_caso-ficha .casos .box .mod-video i, .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo .txt h3,
@@ -37,7 +37,7 @@ a, .s_que-hacemos .s1 h4 span,
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
 }
-a, .s_que-hacemos .s1 h4 span,
+a, .s_home .s3 .video-cont .vplay i, .s_xomos .s1 .video-cont .playxomos i, .s_que-hacemos .s1 h4 span,
 .s_que-hacemos .s1mobile h4 span, .s_que-hacemos .s2 .slider-casosTop ul li .item .caso-hover,
 .s_que-hacemos .s2 .slider-casosDown ul li .item .caso-hover, .s_que-hacemos .s2 #nextItem, .s_casos-de-exito .casos .box .mod-video i,
 .s_caso-ficha .casos .box .mod-video i, .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo .txt h3,
@@ -47,7 +47,7 @@ a, .s_que-hacemos .s1 h4 span,
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
 }
-a, .s_que-hacemos .s1 h4 span,
+a, .s_home .s3 .video-cont .vplay i, .s_xomos .s1 .video-cont .playxomos i, .s_que-hacemos .s1 h4 span,
 .s_que-hacemos .s1mobile h4 span, .s_que-hacemos .s2 .slider-casosTop ul li .item .caso-hover,
 .s_que-hacemos .s2 .slider-casosDown ul li .item .caso-hover, .s_que-hacemos .s2 #nextItem, .s_casos-de-exito .casos .box .mod-video i,
 .s_caso-ficha .casos .box .mod-video i, .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo .txt h3,
@@ -549,6 +549,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 .s_home .s1 {
   background: #000;
+  position: relative;
 }
 
 .s_home .s1 .video-cont {
@@ -592,6 +593,8 @@ header nav ul .contactanos .redes a:not(:first-child) {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  z-index: 5;
 }
 
 .s_home .s1 .video-cont .cont-1300 h1 {
@@ -721,6 +724,27 @@ header nav ul .contactanos .redes a:not(:first-child) {
   }
 }
 
+@media (max-width: 640px) {
+  .s_home .s2 .cont-1300 .bloque .mod {
+    background: inherit;
+    padding: 20px 10px;
+    background-image: url("../images/home/xomos.jpg");
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: center;
+  }
+  .s_home .s2 .cont-1300 .bloque .mod:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+}
+
 .s_home .s2 .cont-1300 .bloque .mod:before {
   content: '';
   position: absolute;
@@ -751,6 +775,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
   color: #374050;
 }
 
+@media (max-width: 640px) {
+  .s_home .s2 .cont-1300 .bloque .mod h5 {
+    color: #ffffff;
+  }
+}
+
 .s_home .s2 .cont-1300 .bloque .mod h2 {
   font-size: 55px;
   line-height: 65px;
@@ -771,6 +801,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 10px;
+    color: #ffffff;
   }
 }
 
@@ -790,11 +821,23 @@ header nav ul .contactanos .redes a:not(:first-child) {
   }
 }
 
+@media (max-width: 640px) {
+  .s_home .s2 .cont-1300 .bloque .mod p {
+    color: #ffffff;
+  }
+}
+
 .s_home .s2 .cont-1300 .bloque .mod a {
   color: #374050;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 4px;
+}
+
+@media (max-width: 640px) {
+  .s_home .s2 .cont-1300 .bloque .mod a {
+    color: #ffffff;
+  }
 }
 
 .s_home .s2 .cont-1300 .bloque .mod a span {
@@ -849,8 +892,8 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 @media (max-width: 640px) {
   .s_home .s3 .video-cont video {
-    left: -135%;
-    top: 0;
+    left: -212%;
+    top: -220px;
   }
 }
 
@@ -862,13 +905,13 @@ header nav ul .contactanos .redes a:not(:first-child) {
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
   cursor: pointer;
-  font-size: 24px;
+  font-size: 36px;
   border: solid 1px #000000;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   padding: 1px 4px;
   border-radius: 50%;
-  z-index: 99;
+  z-index: 90;
 }
 
 @media (min-width: 1400px) {
@@ -881,12 +924,27 @@ header nav ul .contactanos .redes a:not(:first-child) {
   }
 }
 
+.s_home .s3 .video-cont .vplay:hover {
+  border: solid 1px #F55145;
+}
+
+.s_home .s3 .video-cont .vplay:hover i {
+  color: #F55145;
+}
+
 .s_home .s3 .video-cont .portada-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 90;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .s_home .s3 .video-cont .portada-video {
+    width: inherit;
+    height: 100%;
+  }
 }
 
 .s_home .s4 {
@@ -991,7 +1049,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
 }
 
 .s_home .s4 .cont-1300 .bloque .mod a {
-  color: #374050;
+  color: #ffffff;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 4px;
@@ -1052,6 +1110,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
   background-size: initial;
   background-repeat: no-repeat;
   background-position: right center;
+  position: relative;
 }
 
 @media (max-width: 1400px) {
@@ -1077,6 +1136,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
   width: 580px;
   padding: 60px 0;
   background: #ffffff;
+  position: relative;
 }
 
 @media (max-width: 1400px) {
@@ -1089,6 +1149,27 @@ header nav ul .contactanos .redes a:not(:first-child) {
   .s_home .s5 .cont-1300 .bloque-cont .bloque {
     padding-left: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .s_home .s5 .cont-1300 .bloque-cont .bloque {
+    background: inherit;
+    padding: 40px 10px;
+    background-image: url("../images/home/s5.jpg");
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: center;
+  }
+  .s_home .s5 .cont-1300 .bloque-cont .bloque:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
   }
 }
 
@@ -1110,8 +1191,9 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 @media (max-width: 640px) {
   .s_home .s5 .cont-1300 .bloque-cont .bloque h2 {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 24px;
+    line-height: 34px;
+    color: #ffffff;
   }
 }
 
@@ -1130,11 +1212,23 @@ header nav ul .contactanos .redes a:not(:first-child) {
   }
 }
 
+@media (max-width: 640px) {
+  .s_home .s5 .cont-1300 .bloque-cont .bloque p {
+    color: #ffffff;
+  }
+}
+
 .s_home .s5 .cont-1300 .bloque-cont .bloque a {
   color: #374050;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 4px;
+}
+
+@media (max-width: 640px) {
+  .s_home .s5 .cont-1300 .bloque-cont .bloque a {
+    color: #ffffff;
+  }
 }
 
 .s_home .s5 .cont-1300 .bloque-cont .bloque a span {
@@ -1181,8 +1275,58 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 @media (max-width: 640px) {
   .s_xomos .s1 .video-cont video {
-    left: -135%;
-    top: 0;
+    left: -212%;
+    top: -220px;
+  }
+}
+
+.s_xomos .s1 .video-cont .playxomos {
+  display: block;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  cursor: pointer;
+  font-size: 36px;
+  border: solid 1px #000000;
+  width: 60px;
+  height: 60px;
+  padding: 1px 4px;
+  border-radius: 50%;
+  z-index: 90;
+}
+
+@media (min-width: 1400px) {
+  .s_xomos .s1 .video-cont .playxomos {
+    border: solid 2px #000000;
+    width: 100px;
+    height: 100px;
+    font-size: 58px;
+    padding: 1px 12px;
+  }
+}
+
+.s_xomos .s1 .video-cont .playxomos:hover {
+  border: solid 1px #F55145;
+}
+
+.s_xomos .s1 .video-cont .playxomos:hover i {
+  color: #F55145;
+}
+
+.s_xomos .s1 .video-cont .portada-xomos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .s_xomos .s1 .video-cont .portada-xomos {
+    width: inherit;
+    height: 100%;
   }
 }
 
@@ -1307,12 +1451,39 @@ header nav ul .contactanos .redes a:not(:first-child) {
   }
 }
 
+@media (max-width: 640px) {
+  .s_xomos .s2 .cont-1300 .bloque .mod {
+    background: inherit;
+    padding: 12px 10px;
+    background-image: url("../images/xomos/s2.jpg");
+    background-repeat: no-repeat;
+    background-size: 145%;
+    background-position: center;
+  }
+  .s_xomos .s2 .cont-1300 .bloque .mod:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+}
+
 .s_xomos .s2 .cont-1300 .bloque .mod h5 {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 3px;
   margin-bottom: 10px;
   color: #374050;
+}
+
+@media (max-width: 640px) {
+  .s_xomos .s2 .cont-1300 .bloque .mod h5 {
+    color: #ffffff;
+  }
 }
 
 .s_xomos .s2 .cont-1300 .bloque .mod h2 {
@@ -1330,6 +1501,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
   }
 }
 
+@media (max-width: 640px) {
+  .s_xomos .s2 .cont-1300 .bloque .mod h2 {
+    color: #ffffff;
+  }
+}
+
 .s_xomos .s2 .cont-1300 .bloque .mod p {
   font-size: 20px;
   line-height: 30px;
@@ -1343,6 +1520,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
     font-size: 18px;
     line-height: 26px;
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .s_xomos .s2 .cont-1300 .bloque .mod p {
+    color: #ffffff;
   }
 }
 
@@ -1416,6 +1599,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
 @media (max-width: 640px) {
   .s_xomos .s3 .cont-1300 .bloque-cont {
     height: calc(100vh - 60px);
+    padding-top: 25px;
   }
 }
 
@@ -1436,6 +1620,26 @@ header nav ul .contactanos .redes a:not(:first-child) {
   .s_xomos .s3 .cont-1300 .bloque-cont .bloque {
     padding-left: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .s_xomos .s3 .cont-1300 .bloque-cont .bloque {
+    padding: 10px 10px;
+    background-image: url("../images/xomos/s3.jpg");
+    background-repeat: no-repeat;
+    background-size: 155%;
+    background-position: center;
+  }
+  .s_xomos .s3 .cont-1300 .bloque-cont .bloque:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
   }
 }
 
@@ -1463,6 +1667,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
   color: #374050;
 }
 
+@media (max-width: 640px) {
+  .s_xomos .s3 .cont-1300 .bloque-cont .bloque h5 {
+    color: #ffffff;
+  }
+}
+
 .s_xomos .s3 .cont-1300 .bloque-cont .bloque h2 {
   font-size: 40px;
   line-height: 48px;
@@ -1479,9 +1689,16 @@ header nav ul .contactanos .redes a:not(:first-child) {
 }
 
 @media (max-width: 640px) {
+  .s_xomos .s3 .cont-1300 .bloque-cont .bloque h2 span {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 640px) {
   .s_xomos .s3 .cont-1300 .bloque-cont .bloque h2 {
     font-size: 18px;
     line-height: 24px;
+    color: #ffffff;
   }
 }
 
@@ -1496,6 +1713,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
     font-size: 14px;
     line-height: 18px;
     margin-top: 10px;
+    color: #ffffff;
   }
 }
 
@@ -1530,6 +1748,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
   font-size: 16px;
   line-height: 24px;
   color: #374050;
+}
+
+@media (max-width: 640px) {
+  .s_xomos .s3 .cont-1300 .bloque-cont .bloque .iconos .icon p {
+    color: #ffffff;
+  }
 }
 
 @media (max-width: 400px) {
@@ -2719,7 +2943,19 @@ header nav ul .contactanos .redes a:not(:first-child) {
   .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo,
   .s_caso-ficha .casos .box .mod-full .cont-975 .proximo {
     text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 40px 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo img,
+  .s_caso-ficha .casos .box .mod-full .cont-975 .proximo img {
+    width: 23%;
+    -ms-flex-item-align: center;
+    align-self: center;
   }
 }
 
@@ -2733,7 +2969,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
 @media (max-width: 700px) {
   .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo .txt,
   .s_caso-ficha .casos .box .mod-full .cont-975 .proximo .txt {
-    padding-left: 0;
+    text-align: left;
   }
 }
 
@@ -2751,6 +2987,15 @@ header nav ul .contactanos .redes a:not(:first-child) {
   font-size: 40px;
   line-height: 48px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 700px) {
+  .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo .txt h3,
+  .s_caso-ficha .casos .box .mod-full .cont-975 .proximo .txt h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
 }
 
 .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo .txt i,

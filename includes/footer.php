@@ -54,6 +54,7 @@
    <script>
    	var vid = document.getElementById("v1");
 	var vid2 = document.getElementById("v2"); 
+	var vxomos = document.getElementById("vxomos"); 
 
 		function playVidUno() { 
 		  vid.play(); 
@@ -63,19 +64,36 @@
 		  vid2.play(); 
 		} 
 
+		function playXomos() { 
+		  vxomos.play(); 
+		} 
+
 		function pauseVid() { 
 		  vid.pause(); 
-		  vid2.pause(); 
+		  vid2.pause();
+		  vxomos.pause();
 		}
 
 		$('.vplay').click(function (){
 			$(this).hide();
 			$('.portada-video').hide();
 		});
+
 		$('#v1').click(function (){
 			$('.vplay').hide();
 			$('.portada-video').hide();
 		});
+
+		$('.playxomos').click(function (){
+			$(this).hide();
+			$('.portada-xomos').hide();
+		});
+
+		$('#vxomos').click(function (){
+			$('.playxomos').hide();
+			$('.portada-xomos').hide();
+		});
+
 
 		// $(document).ready(function() {
 		//   $('.mov-video').on('click', function(ev) {

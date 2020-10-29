@@ -161,13 +161,18 @@
 						display: flex
 						@media(max-width: 700px)
 							text-align: center
+							justify-content: center
 							padding: 40px 0 20px
+						img
+							@media(max-width: 700px)
+								width: 23%
+								align-self: center
 						.txt
 							display: inline-block
 							vertical-align: top
 							padding-left: 15px
 							@media(max-width: 700px)
-								padding-left: 0
+								text-align: left
 							h5
 								@extend %bree-regular
 								font-size: 14px
@@ -180,6 +185,10 @@
 								line-height: 48px
 								margin-bottom: 30px
 								@extend %animacion-suave
+								@media(max-width: 700px)
+									font-size: 28px
+									line-height: 36px
+									margin-bottom: 15px
 							i
 								color: $amarillo
 								border: solid 1px $amarillo

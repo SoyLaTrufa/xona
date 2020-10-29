@@ -128,6 +128,9 @@ Class Caso extends Base{
 		 	)
 		));
 	}
+	public function videoS2C3() {
+		return $this->video = Archivo::obtener('id', $this->s2_c3_video);
+	}
 	public function fotoS2C5(){
 		return $this->foto = Foto::obtener(array('id' => $this->s2_c5_foto), array(
 		 	'medidas' => array(
@@ -335,6 +338,10 @@ Class Caso extends Base{
 		));
 	}
 
+	public function videoS5C6() {
+		return $this->video = Archivo::obtener('id', $this->s5_c6_video);
+	}
+
 	// Scroll 6
 	public function fotoS6c1(){
 		return $this->foto = Foto::obtener(array('id' => $this->s6_c1_foto_large), array(
@@ -396,6 +403,7 @@ Class Caso extends Base{
 		$this->s2_c1_foto = $datos->s2_c1_foto;
 		$this->s2_c2_text = $datos->s2_c2_text;
 		$this->s2_c3_foto = $datos->s2_c3_foto;
+		$this->s2_c3_video = $datos->s2_c3_video;
 		$this->s2_c4_video = $datos->s2_c4_video;
 		$this->s2_c5_foto = $datos->s2_c5_foto;
 		$this->s2_c6_foto = $datos->s2_c6_foto;
@@ -422,6 +430,7 @@ Class Caso extends Base{
 		$this->s5_c4_foto = $datos->s5_c4_foto;
 		$this->s5_c5_texto = $datos->s5_c5_texto;
 		$this->s5_c6_foto = $datos->s5_c6_foto;
+		$this->s5_c6_video = $datos->s5_c6_video;
 
 		// Scroll 6
 		$this->s6_c1_foto_large = $datos->s6_c1_foto_large;

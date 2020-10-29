@@ -20,7 +20,7 @@
 	
 <section class="section s1">
 	<div class="video-cont">
-		<video class="video-home" data-autoplay controls loop muted><source src="videos/home-top.mp4" type="video/mp4"></video>
+		<video class="video-home" data-autoplay controls loop muted><source src="videos/home-top-03.mp4" type="video/mp4"></video>
 		<div class="cont-1300">
 		    <h1 class="josh-js" data-josh-anim-name="fadeInUp" data-josh-duration="1200ms">Management Integral de Marketing de Experiencias</h1>
 		    <p class="josh-js" data-josh-anim-name="fadeInUp" style="animation-delay: .6s">Convertimos la visión de nuestros clientes en algo extraordinario, generando una conexión que encante y emocione a sus audiencias.</p>

@@ -54,10 +54,10 @@
 if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 	<section class="section casos" style="background-image: url('<?=$caso->fotoBg->src?>')">
 		<div class="box">
-			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS1C1->src?>')"></div>
-			<!-- <div class="mod mod-bg">
-				<video width="100%" class="video-home" controls loop><source src="<?= $caso->videoS1C1->src ?>" type="video/mp4"></video>
-			</div> -->
+			<!-- <div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS1C1->src?>')"></div> -->
+			<div class="mod mod-bg">
+				<video width="100%" class="video-home" muted data-autoplay loop><source src="<?= $caso->videoS1C1->src ?>" type="video/mp4"></video>
+			</div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS1C2->src?>')"></div>
 			<div class="mod mod-txt" style="background-color:<?=$caso->s1_c3_texto ? '#fff' : ''?> ">
 				<p><?= $caso->s1_c3_texto?></p>
@@ -92,7 +92,10 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 			<div class="mod mod-txt" style="background-color:<?=$caso->s2_c2_text ? '#fff' : ''?> ">
 				<p><?=$caso->s2_c2_text?></p>
 			</div>
-			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS2C3->src?>')"></div>
+			<!-- <div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS2C3->src?>')"></div> -->
+			<div class="mod mod-bg">
+				<video width="100%" class="video-home" muted data-autoplay loop><source src="<?= $caso->videoS2C3->src ?>" type="video/mp4"></video>
+			</div>
 			<div class="mod mod-video play-video2" data-toggle="modal" data-target="#modal-2" style="background-image: url(<?= $caso->s2_c4_video ? 'https://img.youtube.com/vi/'.$caso->s2_c4_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>)">
 				<?= $caso->s2_c4_video ? '<i class="icon-play"></i>' : '' ?>
 			</div>
@@ -191,7 +194,10 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS5c4->src?>')"></div>
 			<div class="mod mod-txt" style="background-color:<?=$caso->s5_c5_texto ? '#fff' : ''?> ">
 				<p><?=$caso->s5_c5_texto?></p>
-			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS5c6->src?>')"></div>
+			<!-- <div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS5c6->src?>')"></div>
+			</div> -->
+			<div class="mod mod-bg">
+				<video width="100%" class="video-home" muted data-autoplay loop><source src="<?= $caso->videoS5C6->src ?>" type="video/mp4"></video>
 			</div>
 		</div>
 	</section>

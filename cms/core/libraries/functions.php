@@ -1026,7 +1026,7 @@ class Files {
 						    debug: true,
 
 						    dragText: "Arrastrá y soltá los archivos acá para subirlos",
-					        uploadButtonText: "Subir archivo",
+					        uploadButtonText: "Subir video",
 					        cancelButtonText: "Cancelar",
 					        failUploadText: "Subida fallida",
 						});

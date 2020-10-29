@@ -159,43 +159,42 @@ Class Casos extends MY_Controller {
 
 
 			// SCROLL 1
-			array(
-				'titulo' => 'Scroll 1',
-				'key'    =>'s1_c1_foto',
-				'label'  =>'Cuadro 1',
-				'type'   =>'jcropimage',
-				'filter' =>null,
-				'list'   =>false,
-				'class'  =>'form-third',
-				'comentario'  =>'Medidas: 640px x 540px (ancho x alto)',
-				'properties'=> array(
-					'id'       => 's1_c1_foto',
-					'name'     => 's1_c1_foto',
-					'quantity' =>1,
-					'sizes'    =>array(
-						array('width'=>'640','height'=>'540', 'method'=>'crop'),
-					),
-				'siempre_jpg' => true,
-				'margenes'    => false,
-				'controller'  => $controller_config["script"]
-				)
-			),
-
-			/* Input file */
 			// array(
 			// 	'titulo' => 'Scroll 1',
-			// 	'key'    =>'s1_c1_video',
-			// 	'label'  =>'Video mp4',
-			// 	'type'   =>'form_upload',
+			// 	'key'    =>'s1_c1_foto',
+			// 	'label'  =>'Cuadro 1',
+			// 	'type'   =>'jcropimage',
 			// 	'filter' =>null,
+			// 	'list'   =>false,
 			// 	'class'  =>'form-third',
-			// 	'comentario'  =>'Medida recomendada: 640px x 540px (ancho x alto), 2Mb',
+			// 	'comentario'  =>'Medidas: 640px x 540px (ancho x alto)',
 			// 	'properties'=> array(
-			// 		'name'          => 's1_c1_video',
-			// 		'allowed_types' => 'mp4',
-			// 		'thumbnail' => false,
+			// 		'id'       => 's1_c1_foto',
+			// 		'name'     => 's1_c1_foto',
+			// 		'quantity' =>1,
+			// 		'sizes'    =>array(
+			// 			array('width'=>'640','height'=>'540', 'method'=>'crop'),
+			// 		),
+			// 	'siempre_jpg' => true,
+			// 	'margenes'    => false,
+			// 	'controller'  => $controller_config["script"]
 			// 	)
 			// ),
+
+			array(
+				'titulo' => 'Scroll 1',
+				'key'    =>'s1_c1_video',
+				'label'  =>'Animación mp4',
+				'type'   =>'form_upload',
+				'filter' =>null,
+				'class'  =>'form-third',
+				'comentario'  =>'Medida recomendada: 640px x 540px (ancho x alto), 2Mb',
+				'properties'=> array(
+					'name'          => 's1_c1_video',
+					'allowed_types' => 'mp4',
+					'thumbnail' => false,
+				)
+			),
 
 			array(
 				'key'    =>'s1_c2_foto',
@@ -305,25 +304,39 @@ Class Casos extends MY_Controller {
 			),
 
 			array(
-				'key'    =>'s2_c3_foto',
-				'label'  =>'Cuadro 3',
-				'type'   =>'jcropimage',
+				'key'    =>'s2_c3_video',
+				'label'  =>'Animacion mp4',
+				'type'   =>'form_upload',
 				'filter' =>null,
-				'list'   =>false,
 				'class'  =>'form-third',
-				'comentario'  =>'Medidas: 640px x 540px (ancho x alto)',
+				'comentario'  =>'Medida recomendada: 640px x 540px (ancho x alto), 2Mb',
 				'properties'=> array(
-					'id'       => 's2_c3_foto',
-					'name'     => 's2_c3_foto',
-					'quantity' =>1,
-					'sizes'    =>array(
-						array('width'=>'640','height'=>'540', 'method'=>'crop'),
-					),
-				'siempre_jpg' => true,
-				'margenes'    => false,
-				'controller'  => $controller_config["script"]
+					'name'          => 's2_c3_video',
+					'allowed_types' => 'mp4',
+					'thumbnail' => false,
 				)
 			),
+
+			// array(
+			// 	'key'    =>'s2_c3_foto',
+			// 	'label'  =>'Cuadro 3',
+			// 	'type'   =>'jcropimage',
+			// 	'filter' =>null,
+			// 	'list'   =>false,
+			// 	'class'  =>'form-third',
+			// 	'comentario'  =>'Medidas: 640px x 540px (ancho x alto)',
+			// 	'properties'=> array(
+			// 		'id'       => 's2_c3_foto',
+			// 		'name'     => 's2_c3_foto',
+			// 		'quantity' =>1,
+			// 		'sizes'    =>array(
+			// 			array('width'=>'640','height'=>'540', 'method'=>'crop'),
+			// 		),
+			// 	'siempre_jpg' => true,
+			// 	'margenes'    => false,
+			// 	'controller'  => $controller_config["script"]
+			// 	)
+			// ),
 
 			array(
 				'key'     =>'s2_c4_video',
@@ -681,24 +694,38 @@ Class Casos extends MY_Controller {
 				)
 			),
 
+			// array(
+			// 	'key'    =>'s5_c6_foto',
+			// 	'label'  =>'Cuadro 6',
+			// 	'type'   =>'jcropimage',
+			// 	'filter' =>null,
+			// 	'list'   =>false,
+			// 	'class'  =>'form-third',
+			// 	'comentario'  =>'Medidas: 640px x 540px (ancho x alto)',
+			// 	'properties'=> array(
+			// 		'id'       => 's5_c6_foto',
+			// 		'name'     => 's5_c6_foto',
+			// 		'quantity' =>1,
+			// 		'sizes'    =>array(
+			// 			array('width'=>'640','height'=>'540', 'method'=>'crop'),
+			// 		),
+			// 	'siempre_jpg' => true,
+			// 	'margenes'    => false,
+			// 	'controller'  => $controller_config["script"]
+			// 	)
+			// ),
+
 			array(
-				'key'    =>'s5_c6_foto',
-				'label'  =>'Cuadro 6',
-				'type'   =>'jcropimage',
+				'key'    =>'s5_c6_video',
+				'label'  =>'Animacion mp4',
+				'type'   =>'form_upload',
 				'filter' =>null,
-				'list'   =>false,
 				'class'  =>'form-third',
-				'comentario'  =>'Medidas: 640px x 540px (ancho x alto)',
+				'comentario'  =>'Medida recomendada: 640px x 540px (ancho x alto), 2Mb',
 				'properties'=> array(
-					'id'       => 's5_c6_foto',
-					'name'     => 's5_c6_foto',
-					'quantity' =>1,
-					'sizes'    =>array(
-						array('width'=>'640','height'=>'540', 'method'=>'crop'),
-					),
-				'siempre_jpg' => true,
-				'margenes'    => false,
-				'controller'  => $controller_config["script"]
+					'name'          => 's5_c6_video',
+					'allowed_types' => 'mp4',
+					'thumbnail' => false,
 				)
 			),
 

@@ -19,7 +19,9 @@
 	
 <section class="section s1">
 	<div class="video-cont">
-       <video class="video-home" data-autoplay controls loop muted><source src="videos/reel-cultura.mp4" type="video/mp4"></video>
+       <video id="vxomos" class="video-home" controls loop><source src="videos/reel-cultura.mp4" type="video/mp4"></video>
+       	<img class="portada-xomos" src="images/xomos/portada.jpg">
+       	<a class="playxomos" onclick="playXomos()"><i class="icon-play"></i></a>
     </div>
 </section>
 
