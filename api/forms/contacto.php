@@ -5,8 +5,7 @@ include_once('core/Formulario.php');
 $form_contacto = new Formulario(
 	array(
 		'destinatarios' => array(
-			// 'hola@xona.com.ar',
-			'weblabarg@gmail.com'
+			'hola@xona.com.ar'
 		),
 		'asunto' 	=> 'Contacto - '.Config::obtener('empresa')->nombre,
 		'remitente' => array(
@@ -71,24 +70,24 @@ $form_contacto->agregarCampos(
 
 // enviar_contacto tiene que corresponder con el name del botón de submit
 if( isset($_POST['enviar_contacto']) ){
-	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
-      // Build POST request:
-      $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-      $recaptcha_secret = '6Lf1q9kZAAAAAJocgcyoLbbMU4DclPv9jL6F2wzP';
-      $recaptcha_response = $_POST['recaptcha_response'];
-
-      // Make and decode POST request:
-			$handle = curl_init($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-			curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
-
-			$recaptcha = curl_exec($handle);
-			curl_close($handle);
-
-			$recaptcha = json_decode($recaptcha);
-
-      // Take action based on the score returned:
-      if ($recaptcha->success AND $recaptcha->score >= 0.5) {
 				$form_contacto->enviar();
-      }
-  }
+	// if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
+ //      // Build POST request:
+ //      $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+ //      $recaptcha_secret = '6Lf1q9kZAAAAAJocgcyoLbbMU4DclPv9jL6F2wzP';
+ //      $recaptcha_response = $_POST['recaptcha_response'];
+
+ //      // Make and decode POST request:
+	// 		$handle = curl_init($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+	// 		curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+
+	// 		$recaptcha = curl_exec($handle);
+	// 		curl_close($handle);
+
+	// 		$recaptcha = json_decode($recaptcha);
+
+ //      // Take action based on the score returned:
+ //      if ($recaptcha->success AND $recaptcha->score >= 0.5) {
+ //      }
+ //  }
 }

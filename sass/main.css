@@ -561,7 +561,9 @@ header nav ul .contactanos .redes a:not(:first-child) {
 .s_home .s1 .video-cont video {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   min-width: 100%;
   min-height: 100%;
   cursor: pointer;
@@ -569,14 +571,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 @media (max-width: 1400px) {
   .s_home .s1 .video-cont video {
-    left: -18%;
     top: -15%;
   }
 }
 
 @media (max-width: 640px) {
   .s_home .s1 .video-cont video {
-    left: -135%;
     top: 0;
   }
 }
@@ -864,20 +864,15 @@ header nav ul .contactanos .redes a:not(:first-child) {
   position: relative;
   height: 100vh;
   overflow: hidden;
-}
-
-.s_home .s3 .video-cont iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  background: #000000;
 }
 
 .s_home .s3 .video-cont video {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   min-width: 100%;
   min-height: 100%;
   cursor: pointer;
@@ -885,15 +880,19 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 @media (max-width: 1400px) {
   .s_home .s3 .video-cont video {
-    left: -18%;
-    top: -15%;
+    width: 100%;
+    min-height: inherit;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 991px) {
   .s_home .s3 .video-cont video {
-    left: -212%;
-    top: -220px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: inherit;
+    transform: inherit;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 
@@ -943,6 +942,7 @@ header nav ul .contactanos .redes a:not(:first-child) {
 @media (max-width: 640px) {
   .s_home .s3 .video-cont .portada-video {
     width: inherit;
+    left: -100%;
     height: 100%;
   }
 }
@@ -1255,12 +1255,15 @@ header nav ul .contactanos .redes a:not(:first-child) {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: #000000;
 }
 
 .s_xomos .s1 .video-cont video {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   min-width: 100%;
   min-height: 100%;
   cursor: pointer;
@@ -1268,15 +1271,19 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 @media (max-width: 1400px) {
   .s_xomos .s1 .video-cont video {
-    left: -18%;
-    top: -15%;
+    width: 100%;
+    min-height: inherit;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 991px) {
   .s_xomos .s1 .video-cont video {
-    left: -212%;
-    top: -220px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: inherit;
+    transform: inherit;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 
@@ -2934,9 +2941,9 @@ header nav ul .contactanos .redes a:not(:first-child) {
 
 .s_casos-de-exito .casos .box .mod-full .cont-975 .proximo,
 .s_caso-ficha .casos .box .mod-full .cont-975 .proximo {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: -webkit-box;
 }
 
 @media (max-width: 700px) {
@@ -3611,6 +3618,12 @@ header nav ul .contactanos .redes a:not(:first-child) {
 .s_contacto .s2 .bottom .redes .red:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+
+.alert-success {
+  background-color: #000000;
+  color: #F7B90E;
+  font-size: 18px;
 }
 
 footer {

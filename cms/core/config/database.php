@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = '192.168.0.195';
 $db['default']['database'] = 'xona_cms';
 $db['default']['username'] = 'xona_admin';
 $db['default']['password'] = 'Bsr3GKe9dIA7';

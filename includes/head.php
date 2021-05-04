@@ -72,7 +72,7 @@ $empresa = Config::obtener('empresa');
     <!-- Carga las tipografías -->
     <script async src="js/fonts.js"></script>
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lf1q9kZAAAAAAQ6UDmi-2t1JwdwdB9jEESDKQkq"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Lf1q9kZAAAAAAQ6UDmi-2t1JwdwdB9jEESDKQkq"></script>
 
     <script>
         grecaptcha.ready(function () {
@@ -81,7 +81,7 @@ $empresa = Config::obtener('empresa');
                 recaptchaResponse.value = token;
             });
         });
-    </script> 
+    </script>  -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

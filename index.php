@@ -46,7 +46,6 @@
 
 <section class="section s3">
 	<div class="video-cont">
-       <!-- <iframe src="https://www.youtube.com/embed/cTxWCrSyPFg?autoplay=1 &rel=0&mute=1&controls=0&loop=1&showinfo=0&modestbranding=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
        <video id="v1" class="video-home" loop controls><source src="videos/reel-2020.mp4" type="video/mp4"></video>
        	<img class="portada-video" src="images/home/portada-video.jpg">
        <a class="vplay" onclick="playVidUno()"><i class="icon-play"></i></a>

@@ -50,7 +50,7 @@
 			                <input type="tel" name="tel" id="tel" placeholder="Teléfono" value="<?= isset($_POST['tel']) ? $_POST['tel'] : ''?>">                        
 			            </div>
 
-			            <input type="hidden"  name="recaptcha_response" id="recaptchaContacto">
+			            <!-- <input type="hidden"  name="recaptcha_response" id="recaptchaContacto"> -->
 			              			
 						<div class="form-group">
 			           		 <textarea name="consulta" placeholder="¿Qué podemos hacer juntos?" ><?= isset($_POST['consulta']) ? $_POST['consulta'] : '' ?></textarea>			

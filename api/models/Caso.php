@@ -451,16 +451,16 @@ Class Caso extends Base{
 	* SQL por defecto
 	* Defino los valores por defecto para todas las cláusulas
 	*/
-	protected static function sql_defecto($tabla, $clausula, $sentencias){
-		$sql = parent::sql_defecto($tabla, $clausula, $sentencias);
-		switch($clausula){
-			case 'order' :
-				$sql = 'ORDER BY '.(!empty($sentencias) ? implode(',', $sentencias).',' : '').' '.$tabla.'.fecha DESC, '.$tabla.'.id DESC';
-				break;
-		}
+	// protected static function sql_defecto($tabla, $clausula, $sentencias){
+	// 	$sql = parent::sql_defecto($tabla, $clausula, $sentencias);
+	// 	switch($clausula){
+	// 		case 'order' :
+	// 			$sql = 'ORDER BY '.(!empty($sentencias) ? implode(',', $sentencias).',' : '').' '.$tabla.'.fecha DESC, '.$tabla.'.id DESC';
+	// 			break;
+	// 	}
 
-		return $sql;
-	}
+	// 	return $sql;
+	// }
 
 
 	/**

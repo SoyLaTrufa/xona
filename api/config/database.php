@@ -11,16 +11,16 @@
 
 return array(
 
-	'hostname' => 'localhost',
+	// 'hostname' => 'localhost',
+	// 'database' => 'xona_cms',
+	// 'username' => 'xona_admin',
+	// 'password' => 'Bsr3GKe9dIA7',
+	// 'charset'  => 'utf8',
+
+	'hostname' => '192.168.0.195',
 	'database' => 'xona_cms',
 	'username' => 'xona_admin',
 	'password' => 'Bsr3GKe9dIA7',
 	'charset'  => 'utf8',
-
-	// 'hostname' => '192.168.0.195',
-	// 'database' => 'cms_xona',
-	// 'username' => 'cms_admin',
-	// 'password' => 'Bsr3GKe9dIA7',
-	// 'charset'  => 'utf8',
 	
 );

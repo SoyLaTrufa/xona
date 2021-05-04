@@ -63,7 +63,7 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 				<p><?= $caso->s1_c3_texto?></p>
 			</div>
 			<div class="mod mod-bg mod-large" style="background-image: url('<?=$caso->fotoS1C4->src?>')"></div>
-			<div class="mod mod-video play-video1" data-toggle="modal" data-target="#modal-1" style="background-image: url(<?= $caso->s1_c5_video ? 'https://img.youtube.com/vi/'.$caso->s1_c5_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>)">
+			<div class="mod mod-video play-video1" data-toggle="modal" data-target="#modal-1" style="background-image: url(<?= $caso->s1_c5_video ? 'https://img.youtube.com/vi/'.$caso->s1_c5_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>); background-size: cover">
 				<?= $caso->s1_c5_video ? '<i class="icon-play"></i>' : '' ?>
 			</div>
 		</div>
@@ -96,7 +96,7 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 			<div class="mod mod-bg">
 				<video width="100%" class="video-home" muted data-autoplay loop><source src="<?= $caso->videoS2C3->src ?>" type="video/mp4"></video>
 			</div>
-			<div class="mod mod-video play-video2" data-toggle="modal" data-target="#modal-2" style="background-image: url(<?= $caso->s2_c4_video ? 'https://img.youtube.com/vi/'.$caso->s2_c4_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>)">
+			<div class="mod mod-video play-video2" data-toggle="modal" data-target="#modal-2" style="background-image: url(<?= $caso->s2_c4_video ? 'https://img.youtube.com/vi/'.$caso->s2_c4_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>); background-size: cover">
 				<?= $caso->s2_c4_video ? '<i class="icon-play"></i>' : '' ?>
 			</div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS2C5->src?>')"></div>
@@ -129,7 +129,7 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS3C2->src?>')"></div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS3C3->src?>')"></div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS3C4->src?>')"></div>
-			<div class="mod mod-video play-video3" data-toggle="modal" data-target="#modal-3" style="background-image: url(<?= $caso->s3_c5_video ? 'https://img.youtube.com/vi/'.$caso->s3_c5_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>)">
+			<div class="mod mod-video play-video3" data-toggle="modal" data-target="#modal-3" style="background-image: url(<?= $caso->s3_c5_video ? 'https://img.youtube.com/vi/'.$caso->s3_c5_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>); background-size: cover">
 				<?= $caso->s3_c5_video ? '<i class="icon-play"></i>' : '' ?>
 			</div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS3C6->src?>')"></div>
@@ -158,7 +158,7 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS4c1->src?>')"></div>
 			<div class="mod mod-large" style="background-image: url('<?=$caso->fotoS4c2->src?>')"></div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS4c3->src?>')"></div>
-			<div class="mod mod-video play-video4" data-toggle="modal" data-target="#modal-4" style="background-image: url(<?= $caso->s4_c4_video ? 'https://img.youtube.com/vi/'.$caso->s4_c4_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>)">
+			<div class="mod mod-video play-video4" data-toggle="modal" data-target="#modal-4" style="background-image: url(<?= $caso->s4_c4_video ? 'https://img.youtube.com/vi/'.$caso->s4_c4_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>); background-size: cover">
 				<?= $caso->s4_c4_video ? '<i class="icon-play"></i>' : '' ?>
 			</div>
 			<div class="mod mod-txt" style="background-color:<?=$caso->s4_c5_texto ? '#fff' : ''?> ">
@@ -186,7 +186,7 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 	if ($caso->s5_c1_video or $caso->s5_c2_foto or $caso->s5_c3_foto) { ?>
 	<section class="section casos" style="background-image: url('<?=$caso->fotoBg->src?>')">
 		<div class="box">
-			<div class="mod mod-video play-video5" data-toggle="modal" data-target="#modal-5" style="background-image: url(<?= $caso->s5_c1_video ? 'https://img.youtube.com/vi/'.$caso->s5_c1_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>)">
+			<div class="mod mod-video play-video5" data-toggle="modal" data-target="#modal-5" style="background-image: url(<?= $caso->s5_c1_video ? 'https://img.youtube.com/vi/'.$caso->s5_c1_video.'/maxresdefault.jpg' : 'images/defecto/640x540.png' ?>); background-size: cover">
 				<?= $caso->s5_c1_video ? '<i class="icon-play"></i>' : '' ?>
 			</div>
 			<div class="mod mod-bg" style="background-image: url('<?=$caso->fotoS5c2->src?>')"></div>
@@ -225,8 +225,7 @@ if ($caso->s1_c1_foto or $caso->s1_c2_foto or $caso->s1_c3_texto) { ?>
 					<a href="<?=url('que-hacemos')?>"><i class="icon-right"></i>Volver al listado</a>
 				</div>
 			<?php 
-				foreach (Caso::obtener(array('excluir' => $_GET['id'])) as $key => $caso) { 
-					if ($key === 1) {break;} ?>
+				foreach (Caso::obtener(array('excluir' => $_GET['id'])) as $key => $caso) { ?>
 					<a href="<?=$caso->url?>" class="proximo">
 						<img src="<?=$caso->foto->src?>" alt="<?=$caso->titulo?>" width="154">
 						<div class="txt">

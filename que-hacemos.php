@@ -11,6 +11,7 @@
   // Plugins::activar('animacion');
   Plugins::activar('owlCarousel');
   $casos = Caso::obtener('');
+  $mitad = round(count($casos)/2);
 
 // Fin configuración de la página //
 
@@ -104,52 +105,7 @@
       <a class="sombra"></a>
     </div>
   </section>
-
-  <?php 
-    $cas = array(
-      (object) array(
-        'img' => 'images/temp/caso1.jpg',
-        'titulo' => 'LOREM IPSUM',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-      (object) array(
-        'img' => 'images/temp/caso2.jpg',
-        'titulo' => 'LOREM IPSUM 2',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-      (object) array(
-        'img' => 'images/temp/caso3.jpg',
-        'titulo' => 'LOREM IPSUM 3',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-      (object) array(
-        'img' => 'images/temp/caso4.jpg',
-        'titulo' => 'LOREM IPSUM 4',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ), (object) array(
-        'img' => 'images/temp/caso5.jpg',
-        'titulo' => 'LOREM IPSUM 5',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-      (object) array(
-        'img' => 'images/temp/caso6.jpg',
-        'titulo' => 'LOREM IPSUM 6',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-      (object) array(
-        'img' => 'images/temp/caso7.jpg',
-        'titulo' => 'LOREM IPSUM 7',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-      (object) array(
-        'img' => 'images/temp/caso8.jpg',
-        'titulo' => 'LOREM IPSUM 8',
-        'bajada' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis libero id posuere tempor'
-      ),
-    );
-
-    $mitad = round(count($casos)/2);
-   ?>   
+ 
   <section class="section s2" id="casos">
     <i class="icon-right" id="nextItem"></i>
     <div class="slider-casosTop">

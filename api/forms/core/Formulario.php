@@ -13,7 +13,7 @@ Class Formulario{
 	public $campos = array();
 
 	private $mensajes_estado = array(
-		'incompleto' 		=> 'Todos los campos con asterisco (*) son requeridos.',
+		'incompleto' 		=> 'Todos los campos son requeridos.',
 
 		'error' 			=> 'Hubo un problema al enviar el mensaje. Por favor, vuelva a intentarlo.',
 
@@ -21,8 +21,8 @@ Class Formulario{
 
 		'captcha_invalido' 	=> 'El captcha no fue completado correctamente. Vuelva a intentarlo.',
 
-		'ok' 				=> 'Su mensaje ha sido enviado, muchas gracias por comunicarse con nosotros.<br />
-								En breve nos pondremos en contacto con Ud.',
+		'ok' 				=> 'Tu mensaje se envió correctamente.<br />
+								¡Muchas gracias por comunicarte con nosotros! Nos pondremos en contacto rápidamente.',
 	);
 
 	public function __construct( $config ){
@@ -246,8 +246,8 @@ Class Formulario{
 					$PHPMailer->Port = 587;
 					$PHPMailer->SMTPSecure = 'tls';
 					$PHPMailer->SMTPAuth = true;
-					$PHPMailer->Username = 'weblabarg@gmail.com';
-					$PHPMailer->Password = '111111';
+					$PHPMailer->Username = 'formulariowebiri@gmail.com';
+					$PHPMailer->Password = 'chinitos1346';
 
 					$PHPMailer->CharSet  = "UTF-8";
 					$PHPMailer->IsHTML(true);
